@@ -1,4 +1,4 @@
-##Week 2 Assignment - JavaScript Game
+## Week 2 Assignment - JavaScript Game
 
 **Plan:** Create a mouse-controlled solo pong game using the HTML Canvas function.
 
