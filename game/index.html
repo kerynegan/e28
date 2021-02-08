@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>One, Two, or Three</title>
-	<link rel="stylesheet" type="text/css" href="./style.css">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Merriweather&display=swap" rel="stylesheet">
-</head>
-<body>
-	<h1>One, Two, or Three</h1>
-	<em>by Keryn Egan</em>
 
-	<h2 id="randomNumber">&nbsp;</h2>
-	<label for="miniValue">Minimum value:</label>
-	<input type="number" id="miniValue" defaultValue="25" min="25" max="999" placeholder="25" step="1">
-	<label for="maxiValue">Maximum value:</label>
-	<input type="number" id="maxiValue" defaultValue="100" min="26" max="1000" placeholder="100" step="1">
-	<br>
-	<button id="startBtn">Click to Start</button>
-	<br>
-	<p>Play a number:</p>
-	<button id="oneBtn">One</button>	
-	<button id="twoBtn">Two</button>	
-	<button id="threeBtn">Three</button>
-	<p id="playerChoice">&nbsp;</p>
-	<p id="computerChoice">&nbsp;</p>
-	<p id="gameAlert">&nbsp;</p>
-	<h2>Directions: </h2>
-	<p>
-		<ul>
-			<li>Choose a range (if desired) then press the button to start.</li>
-			<li>The computer will choose a random number in that range.</li>
-			<li>You can then choose either 1, 2, or 3 to subtract from that number.</li>
-			<li>Then it's the computer's turn to do the same.</li>
-			<li>The goal is to AVOID being the last player left with 1 number.</li>
-			<li><strong>Good luck!</strong></li>
-		</ul>
-	</p>
-	<script type="text/javascript" src="./game.js"></script>
-</body>
+  <head>
+    <title>One, Two, or Three</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Merriweather&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <h1>One, Two, or Three</h1>
+    <em>by Keryn Egan</em>
+
+    <h2 id="randomNumber">&nbsp;</h2>
+    <label for="miniValue">Minimum value:</label>
+    <input type="number" id="miniValue" defaultValue="25" min="25" max="999" placeholder="25" step="1">
+    <label for="maxiValue">Maximum value:</label>
+    <input type="number" id="maxiValue" defaultValue="100" min="26" max="1000" placeholder="100" step="1">
+    <br>
+    <button id="startBtn">Click to Start</button>
+    <br>
+    <p>Play a number:</p>
+    <button id="oneBtn">One</button>
+    <button id="twoBtn">Two</button>
+    <button id="threeBtn">Three</button>
+    <p id="playerChoice">&nbsp;</p>
+    <p id="computerChoice">&nbsp;</p>
+    <p id="gameAlert">&nbsp;</p>
+    <h2>Directions: </h2>
+    <ul id="directions">
+      <li>Choose a range (if desired) and then press the button to start.</li>
+      <li>The computer will choose a random number in that range.</li>
+      <li>You can then choose either 1, 2, or 3 to subtract from that number.</li>
+      <li>Then it's the computer's turn to do the same.</li>
+      <li>The goal is to AVOID being the last player left with 1 number.</li>
+      <li><strong>Good luck!</strong></li>
+    </ul>
+    <script type="text/javascript" src="./game.js"></script>
+  </body>
 
 
 </html>
