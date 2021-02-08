@@ -9,12 +9,7 @@
 <body>
 	<h1>One, Two, or Three</h1>
 	<em>by Keryn Egan</em>
-	<p><strong>Directions: </strong>
-		<br>Choose a range of numbers and press the button to start the game.
-		<br>The computer will choose a random number between the minimum and maximum values you set below.
-		<br>Select either one, two, or three to subtract from that random number.
-		<br>Then it's the computer's turn to do the same. 
-		<br>To win, leave the computer stuck with the last number!</p>
+
 	<h2 id="randomNumber">&nbsp;</h2>
 	<label for="miniValue">Minimum value:</label>
 	<input type="number" id="miniValue" defaultValue="25" min="25" max="999" placeholder="25" step="1">
@@ -23,12 +18,24 @@
 	<br>
 	<button id="startBtn">Click to Start</button>
 	<br>
+	<p>Play a number:</p>
 	<button id="oneBtn">One</button>	
 	<button id="twoBtn">Two</button>	
 	<button id="threeBtn">Three</button>
 	<p id="playerChoice">&nbsp;</p>
 	<p id="computerChoice">&nbsp;</p>
 	<p id="gameAlert">&nbsp;</p>
+	<h2>Directions: </h2>
+	<p>
+		<ul>
+			<li>Choose a range (if desired) then press the button to start.</li>
+			<li>The computer will choose a random number in that range.</li>
+			<li>You can then choose either 1, 2, or 3 to subtract from that number.</li>
+			<li>Then it's the computer's turn to do the same.</li>
+			<li>The goal is to AVOID being the last player left with 1 number.</li>
+			<li><strong>Good luck!</strong></li>
+		</ul>
+	</p>
 	<script type="text/javascript" src="./game.js"></script>
 </body>
 
