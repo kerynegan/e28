@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang='en'>
+<head>
+    <title>Hello from p1</title>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src='https://unpkg.com/vue@next' defer></script>
+    <script type="text/javascript" src="./game.js" defer></script>
+</head>
+<body>
+    <h1>What lovely weather we're having today, hmm?</h1>
+    <div id='weatherQuestion' v-cloak>
+        <label>Can you name some types of weather?</label>
+        <input type='text' v-model='weather'>
+        <button v-on:click='addWeatherType()'>Submit</button>
+        <ul>
+            <li v-for='thisWeather in weatherTypes'> {{ thisWeather }} </li>
+        </ul>
+
+    </div>
+</body>
+</html>
