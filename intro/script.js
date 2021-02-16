@@ -1,20 +1,13 @@
-const Game = {
-    data(){
+const MyApp = {
+    data() {
         return {
-            playerName: '',
-            mysteryNumber: 4,
-            guess: null,
-            guesses:[],
-            correct: false,
-
-        }
-    },
-    methods: {
-        addGuess() {
-            this.guesses.push(this.guess);
-            this.correct = this.guess == this.mysteryNumber
-        }
+            isAdmin: true
+       }
     }
-};
-
-const app = Vue.createApp(Game).mount('#app');
+}
+const app = Vue.createApp(MyApp).mount('#app');
+app.data['isAdmin']
+// app.data.isAdmin
+// app.$data.isAdmin
+// $app.data.isAdmin
+// app.isAdmin
