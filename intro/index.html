@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <title>Vue.js Intro</title>
+    <meta charset='utf-8'>
+    <link href=data:, rel=icon>
+
+    <script src='https://unpkg.com/vue@next' defer></script>
+    <script src='script.js' defer></script>
+    <style>
+        [v-cloak] {
+            display:none;
+        }
+    </style>
+</head>
+<!--
+    -Make it so that the player’s name is not dynamically displayed as they’re typing it in. Instead, the name should display after they click a button labeled Start game.
+    -Make it so that the instructions and prompt for the user’s guess only shows up once they’ve entered their player name.
+    -Add a reset button that appears once the user has guessed the correct answer. Make it so this button resets the game, clearing previous feedback and guesses, and generating a new mystery number.-->
+<body>
+    <h1>Vue.js Intro</h1>
+
+    <div id='app' v-cloak>
+        <label> What is your name? <input v-model="playerName" type="text"></label>
+        <p v-if="playerName !=''">Player name: {{ playerName }}</p>
+
+        <label>What is my number between 1-10?</label>
+        <input type='text' v-model='guess'>
+        <button v-on:click='addGuess()'>Submit guess</button>
+        <ul>
+            <li v-for='thisGuess in guesses'> {{ thisGuess }} </li>
+        </ul>
+
+        <p>{{ guesses }}</p>
+        <p v-if='correct'>You guessed the mystery number!</p>
+    </div>
+</body>
+
+</html>
