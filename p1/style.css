@@ -1,0 +1,59 @@
+[v-cloak] {
+    display: none
+}
+
+.no-items {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+body {
+	text-align: center;
+	background-color: #FAE1DD;
+	font-family: 'Merriweather', serif;
+  }
+  
+  h1,
+  h2 {
+	font-family: 'Lora', serif;
+  }
+  
+  #startBtn {
+	display: inline-block;
+	width: 120px;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;
+	background-color: #FEC89A;
+  }
+  
+  #gameAlert {
+	color: #ff0000;
+	font-weight: 700;
+  }
+  
+  #oneBtn,
+  #twoBtn,
+  #threeBtn {
+	padding: 10px;
+	margin: 5px;
+	border-radius: 10px;
+  }
+  
+  #oneBtn {
+	background-color: #FEC5BB;
+  }
+  
+  #twoBtn {
+	background-color: #D8E2DC;
+  }
+  
+  #threeBtn {
+	background-color: #E8E8E4;
+  }
+  
+  ul#directions {
+	text-align: left;
+	margin-left: 30%;
+  }
+  

@@ -1,24 +1,54 @@
 <!doctype html>
 <html lang='en'>
+
 <head>
-    <title>Hello from p1</title>
+    <title>One, Two, or Three</title>
     <meta charset='utf-8'>
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <script src='https://unpkg.com/vue@next' defer></script>
-    <script type="text/javascript" src="./game.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Merriweather&display=swap" rel="stylesheet">
+    <script src='https://unpkg.com/vue@next'></script>
+    <script src='script.js' defer></script>
+
 </head>
+
 <body>
-    <h1>What lovely weather we're having today, hmm?</h1>
-    <div id='weatherQuestion' v-cloak>
-        <label>Can you name some types of weather?</label>
-        <input type='text' v-model='weather'>
-        <button v-on:click='addWeatherType()'>Submit</button>
-        <ul>
-            <li v-for='thisWeather in weatherTypes'> {{ thisWeather }} </li>
+
+    <div id='app' v-cloak>
+
+        <h1>One, Two, or Three</h1>
+
+        <label for='name'>Welcome to the game! What's your name?</label>
+        <input id='name' type='text' v-model='name'>
+
+        <button v-on:click='addItem'>Ready to begin?</button>
+
+        <div class='no-items' v-if='items.length == 0'>
+            You have no items on your list.
+        </div>
+        <div v-else>
+            <p>
+                Item count: {{ items.length }}
+            </p>
+
+            <ul>
+                <li v-for='thisItem in items'>
+                    {{ thisItem }}
+                </li>
+            </ul>
+        </div>
+        <h2>Directions: </h2>
+        <ul id="directions">
+          <li>Choose a range (if desired) and then press the button to start.</li>
+          <li>The computer will choose a random number in that range.</li>
+          <li>You can then choose either 1, 2, or 3 to subtract from that number.</li>
+          <li>Then it's the computer's turn to do the same.</li>
+          <li>The goal is to AVOID being the last player left with 1 number.</li>
+          <li><strong>Good luck!</strong></li>
         </ul>
 
-        <p> {{ weatherTypes }}</p>
-
     </div>
+
 </body>
+
 </html>
