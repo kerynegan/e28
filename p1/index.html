@@ -4,40 +4,64 @@
 <head>
     <title>One, Two, or Three</title>
     <meta charset='utf-8'>
-    <link rel="stylesheet" type="text/css" href="style.css">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Merriweather&display=swap" rel="stylesheet">
     <script src='https://unpkg.com/vue@next'></script>
     <script src='script.js' defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
 <body>
-
+    <h1>One, Two, or Three</h1>
     <div id='app' v-cloak>
-
-        <h1>One, Two, or Three</h1>
-
-        <label for='name'>Welcome to the game! What's your name?</label>
-        <input id='name' type='text' v-model='name'>
-
-        <button v-on:click='addItem'>Ready to begin?</button>
-
-        <div class='no-items' v-if='items.length == 0'>
-            You have no items on your list.
-        </div>
-        <div v-else>
+        <div v-if='!playerName'>
             <p>
-                Item count: {{ items.length }}
+                Welcome to the game!<br />
+                What's your name? <br />
             </p>
-
-            <ul>
-                <li v-for='thisItem in items'>
-                    {{ thisItem }}
-                </li>
-            </ul>
+            <label for='playerName'>Name: </label>         
+            <input type='text' v-model.lazy='playerName' id='playerName'> 
+            <button type='button' value="Submit">Submit</button>
         </div>
-        <h2>Directions: </h2>
+
+        <div v-if='playerName !=""'>
+            <h3>Hello, {{ playerName }}! </h3>
+            <div v-if='!gameStarted'>
+                <p>Are you ready to begin?</p>
+                <p>When you're ready, select a range below and the press the button.</p>
+    
+                <form>
+                    <label for="minimumValue">Minimum Value:</label>
+                    <input type='number' id='minimumValue' v-model.number.lazy='minimumValue'> <br />
+                    <label for="maximumValue">Maximum Value:</label>
+                    <input type='number' id='maximumValue' v-model.number.lazy='maximumValue'> <br />
+                    <button type='button' v-on:click='beginGame()'>Start the game</button>
+                </form>
+            </div>
+            <div v-else-if='gameStarted'>
+                <p>The starting number is {{ randomNumber }}.</p>
+                <p>Current total: {{ currentNumber }}</p>
+                
+                <p>Play a Number:</p>
+                <form>
+                    <input type="radio" id="one" value="1" v-model="playerSelection">
+                    <label for="one">One</label>
+                    <input type="radio" id="two" value="2" v-model="playerSelection">
+                    <label for="two">Two</label>
+                    <input type="radio" id="three" value="3" v-model="playerSelection">
+                    <label for="three">Three</label><br />
+                    <button type='button' v-on:click='makeSelection()'>Submit</button>
+                </form>
+                <ul>
+                    <li v-for='thisChoice in choices'>{{ thisChoice }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>Click to toggle directions</h2>
         <ul id="directions">
           <li>Choose a range (if desired) and then press the button to start.</li>
           <li>The computer will choose a random number in that range.</li>
@@ -48,6 +72,20 @@
         </ul>
 
     </div>
+
+    <!-- <div>
+        <h2>Games tally:</h2>
+        <div>
+            <h4>Current Game</h4>
+            <p>The game number is {{ randomNumber}}, and was selected from a range of {{ minimumValue }} to {{ maximumValue }}.</p>
+            <ul>
+                <li>{{ randomNumber }}</li>
+                <li v-for='thisChoice in choices'>{{ thisChoice }}</li>
+                <li></li>
+            </ul>
+            
+        </div>
+    </div> -->
 
 </body>
 
