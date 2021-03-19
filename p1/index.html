@@ -26,7 +26,7 @@
                         What's your name? <br />
                     </p>
                     <label for='playerName'>Name: </label>         
-                    <input type='text' v-model.lazy='playerName' id='playerName' v-on:keyup.enter='checkName()' required > <br />
+                    <input type='text' v-model.lazy.trim='playerName' id='playerName' v-on:keyup.enter='checkName()' required > <br />
                     <button type='button' v-on:click='checkName()'>Submit</button>
                     <p v-if='errorAlert != ""'>{{errorAlert}}</p>
                 </div>
@@ -64,7 +64,19 @@
                         </div>
                     </div>
                 </div>
-
+                <div class='row'>
+                    <h2>Game History</h2>
+                    <div class='col-md-9'>
+                        <game-history></game-history>
+                        <game-history></game-history>
+                        <game-history></game-history>
+                        <game-history></game-history>
+                        <game-history></game-history>
+                        <game-history></game-history>
+                        <game-history></game-history>
+                        <game-history></game-history>
+                    </div>
+                </div>
             </div>
             <div class="col-md-4">
                 <div>
@@ -90,6 +102,15 @@
             </div>
         </div>
     </div>
+    <script id='game-history' type='text/x-template'>
+        <div v-if='!deleted' class="col-sm-3 mx-auto">
+            <ul>
+                <li>Round #: TBD</li>
+                <li>Winner: TBD</li>
+            </ul>
+            <button v-on:click='deleteRound()'>Delete from history</button>
+        </div>
+    </script>
  
 
     <!-- <div>

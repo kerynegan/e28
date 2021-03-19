@@ -131,4 +131,21 @@ const Game = {
 
 }
 
-const app = Vue.createApp(Game).mount('#app');
+const GameHistory = {
+    name: 'GameHistory',
+    data() {
+        return {
+            deleted: false,
+        }
+    },
+    methods: {
+        deleteRound() {
+            this.deleted = true;
+        }
+    },
+    template: '#game-history'
+}
+
+const app = Vue.createApp(Game);
+app.component('game-history', GameHistory);
+app.mount('#app');

@@ -50,6 +50,17 @@ button {
    background-color:rgb(233, 245, 242);
    padding:10px;
  }
+ .col-sm-3 {
+  background-color:rgb(233, 245, 242);
+  padding:10px;
+  margin:10px;
+  width:20%;
+ }
+ .col-md-9 {
+   min-width:80%;
+   margin:20px 15%;
+ }
+
 
 ul#directions li {
   text-align: left;
