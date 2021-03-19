@@ -26,7 +26,7 @@
                         What's your name? <br />
                     </p>
                     <label for='playerName'>Name: </label>         
-                    <input type='text' v-model.lazy='playerName' id='playerName' required > 
+                    <input type='text' v-model.lazy='playerName' id='playerName' v-on:keyup.enter='checkName()' required > <br />
                     <button type='button' v-on:click='checkName()'>Submit</button>
                     <p v-if='errorAlert != ""'>{{errorAlert}}</p>
                 </div>
@@ -38,10 +38,10 @@
                         <p>When you're ready, select a range below and the press the button.</p>
             
                         <form>
-                            <label for="minimumValue">Minimum Value:</label>
-                            <input type='number' id='minimumValue' v-model.number.lazy='minimumValue'> <br />
+                            <label for="minimumValue">Minimum Value: </label>
+                            <input type='number' id='minimumValue' v-model.number.lazy='minimumValue' v-on:keyup.enter='beginGame()'> <br />
                             <label for="maximumValue">Maximum Value:</label>
-                            <input type='number' id='maximumValue' v-model.number.lazy='maximumValue'> <br />
+                            <input type='number' id='maximumValue' v-model.number.lazy='maximumValue' v-on:keyup.enter='beginGame()'> <br />
                             <button type='button' v-on:click='beginGame()'>Start the game</button>
                         </form>
                     </div>

@@ -14,6 +14,8 @@
 body {
 	text-align: center;
 	background-color: #FAE1DD;
+  font-size:14px;
+  font-family: Arial, Helvetica, sans-serif;
   }
 ul li {
    text-align:left;
@@ -21,13 +23,24 @@ ul li {
 h1, h2 {
 	font-family: 'Lora', serif;
 }
-input:invalid {
-   border:1px dotted #ff0000;
- }
 
-input[type="text"]{
+
+input[type="text"], 
+input[type="number"] {
   margin: 5px;
+  border-radius:5px;
 }
+
+button {
+  display: inline-block;
+	min-width: 120px;
+	padding: 10px;
+	margin: 20px 10px;
+	border-radius: 10px;
+	background-color: #FEC89A;
+
+}
+
 .col-md-8 {
   background-color: #FAE1DD;
 }
@@ -40,7 +53,7 @@ input[type="text"]{
 
 ul#directions li {
   text-align: left;
-  margin-left:10%;
+  margin-left:5%;
  }
 
 ul#gameTally {
