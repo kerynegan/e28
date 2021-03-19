@@ -2,28 +2,78 @@
 <html lang='en'>
 
 <head>
-    <title>Vue.js Intro</title>
+    <title>intro</title>
     <meta charset='utf-8'>
-    <link href=data:, rel=icon>
 
     <script src='https://unpkg.com/vue@next' defer></script>
     <script src='script.js' defer></script>
+
     <style>
         [v-cloak] {
-            display:none;
+            display: none;
         }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
     </style>
 </head>
-<!--
-    -Make it so that the player’s name is not dynamically displayed as they’re typing it in. Instead, the name should display after they click a button labeled Start game.
-    -Make it so that the instructions and prompt for the user’s guess only shows up once they’ve entered their player name.
-    -Add a reset button that appears once the user has guessed the correct answer. Make it so this button resets the game, clearing previous feedback and guesses, and generating a new mystery number.-->
+
 <body>
+
+    
     <h1>Vue.js Intro</h1>
 
-    <div id='app' >
-        Hello
-    </div>
-</body>
+
+
+    <div id='app' v-cloak>
+        <div v-if='!gameStarted'>
+            <p>Welcome to our mystery number game.</p>
+            <label>To get started, tell us your name:
+                <input v-model='playerName' type='text'
+                       v-on:keyup.enter='gameStarted = true'>
+            </label>
+            <button v-on:click='gameStarted = true'>Let’s play!</button>
+        </div>
+        <div v-else>
+
+            <div v-if='!correct'>
+                <p>
+                    Hi, {{ playerName }}.
+                    I’m thinking of a number between 1 and 10.
+                    What do you think it is?
+                </p>
+
+                <label>
+                    Your guess:
+                    <input type='text' v-model='guess' v-on:keyup.enter='addGuess'>
+                </label>
+
+                <button v-on:click='addGuess'>Submit guess</button>
+            </div>
+
+            <p v-if='correct' class='correct'>You guessed the mystery number!</p>
+
+            <button v-if='correct' v-on:click='reset'>Play again</button>
+
+            <div v-if='guesses.length > 0'>
+                <p>High Guesses:</p>
+                <ul>
+                    <template v-for='(thisGuess) in guesses'>
+                        <li v-if='thisGuess > mysteryNumber'>{{ thisGuess }}</li>
+                    </template>
+                </ul>
+
+                <p>Low Guesses:</p>
+                <ul>
+                    <template v-for='(thisGuess) in guesses'>
+                        <li v-if='thisGuess < mysteryNumber'>{{ thisGuess }}</li>
+                    </template>
+                </ul>
+            </div>
+
+        </div>
 
 </html>
