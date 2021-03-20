@@ -4,20 +4,28 @@
 <head>
     <title>One, Two, or Three</title>
     <meta charset='utf-8'>
-
+    <!--Google Fonts-->
     <link rel='preconnect' href='https://fonts.gstatic.com'>
-    <link href='https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Merriweather&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Merriweather&display=swap'
+        rel='stylesheet'>
+
+    <!--Vue-->
     <script src='https://unpkg.com/vue@next'></script>
+
+    <!--Keryn's documents-->
     <script src='script.js' defer></script>
     <link rel='stylesheet' type='text/css' href='style.css'>
-        <!-- Latest compiled and minified CSS -->
-    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css' integrity='sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu' crossorigin='anonymous'>
+
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css'
+        integrity='sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu' crossorigin='anonymous'>
 
 </head>
 
 <body>
     <div id='app' class='container-fluid' v-cloak>
         <div class='row'>
+            <!--left side (pink background)-->
             <div class='col-md-8 justify-content-md-center'>
                 <h1>One, Two, or Three</h1>
                 <div v-if='!playerName'>
@@ -25,8 +33,9 @@
                         Welcome to the game!<br />
                         What's your name? <br />
                     </p>
-                    <label for='playerName'>Name: </label>         
-                    <input type='text' v-model.lazy.trim='playerName' id='playerName' v-on:keyup.enter='checkName()' required > <br />
+                    <label for='playerName'>Name: </label>
+                    <input type='text' v-model.lazy.trim='playerName' id='playerName' v-on:keyup.enter='checkName()'
+                        required> <br />
                     <button type='button' v-on:click='checkName()'>Submit</button><br>
                     <p v-if='errorAlert != ""' class="oops col-sm-5">{{errorAlert}}</p>
                 </div>
@@ -36,19 +45,21 @@
                     <div v-if='!gameStarted'>
                         <p>Are you ready to begin?</p>
                         <p>When you're ready, select a range below and the press the button.</p>
-            
+
                         <form>
                             <label for='minimumValue'>Minimum Value: </label>
-                            <input type='number' id='minimumValue' v-model.number.lazy='minimumValue' v-on:keyup.enter='beginGame()'> <br />
+                            <input type='number' id='minimumValue' v-model.number.lazy='minimumValue'
+                                v-on:keyup.enter='beginGame()'> <br />
                             <label for='maximumValue'>Maximum Value:</label>
-                            <input type='number' id='maximumValue' v-model.number.lazy='maximumValue' v-on:keyup.enter='beginGame()'> <br />
+                            <input type='number' id='maximumValue' v-model.number.lazy='maximumValue'
+                                v-on:keyup.enter='beginGame()'> <br />
                             <button type='button' v-on:click='beginGame()'>Start the game</button>
                         </form>
                     </div>
                     <div v-else-if='gameStarted'>
                         <p>The starting number is {{ randomNumber }}.</p>
                         <p>Current total: {{ currentNumber }}</p>
-                        
+                        <p v-if='errorAlert' class='col-sm-5' v-bind:class="alertClass">{{errorAlert}}</p>
                         <div v-if='gameOver != true'>
                             <p>{{message}}</p>
                             <form class='choosey'>
@@ -61,16 +72,22 @@
                                 <button type='button' v-on:click='makeSelection()'>Submit</button>
                             </form>
                         </div>
-                        <p v-if='errorAlert' class='col-sm-5' v-bind:class="alertClass">{{errorAlert}}</p>
-                        <button v-if='errorAlert' v-on:click='resetGame()'>Start again?</button>
+                        <div v-else>
+                            <button v-if='errorAlert' v-on:click='resetGame("same")'>Play again, {{playerName}}?</button>
+                            <button v-if='errorAlert' v-on:click='resetGame("new")'>Play as new player</button>
+                            <button v-if='errorAlert' v-on:click='resetGame("all")'>Clear all history</button>
+                        </div>
+
+
+
                     </div>
                 </div>
                 <div class='row' v-if='gameCount.length > 0'>
                     <h2>Game History</h2>
                     <div class='col-md-9'>
-                        <game-history v-for="(game, index) in gameCount" v-bind:round='index' v-bind:start='game.start' v-bind:minimum='game.minimum' v-bind:maximum='game.maximum' v-bind:winner='game.winner'
-                        v-on:delete-history='deleteHistory($event)'></game-history>                       
-                        </for>
+                        <game-history v-for="(game, index) in gameCount" v-bind:round='index' v-bind:start='game.start'
+                            v-bind:minimum='game.minimum' v-bind:maximum='game.maximum' v-bind:winner='game.winner'
+                            v-on:delete-history='deleteHistory($event)'></game-history>
                     </div>
                 </div>
             </div>
@@ -78,14 +95,14 @@
                 <div>
                     <h3>Directions</h3>
                     <ul id='directions'>
-                    <li>Choose a range (if desired) and then press the button to start.</li>
-                    <li>The computer will choose a random number in that range.</li>
-                    <li>You can then choose either 1, 2, or 3 to subtract from that number.</li>
-                    <li>Then it's the computer's turn to do the same.</li>
-                    <li>The goal is to AVOID being the last player left with 1 number.</li>
-                    <li><strong>Good luck!</strong></li>
+                        <li>Choose a range (if desired) and then press the button to start.</li>
+                        <li>The computer will choose a random number in that range.</li>
+                        <li>You can then choose either 1, 2, or 3 to subtract from that number.</li>
+                        <li>Then it's the computer's turn to do the same.</li>
+                        <li>The goal is to AVOID being the last player left with 1 number.</li>
+                        <li><strong>Good luck!</strong></li>
                     </ul>
-            
+
                 </div>
                 <div v-if='gameStarted === true'>
                     <h3>Game Tally</h3>
@@ -109,7 +126,7 @@
             <button v-on:click='$emit("delete-history", round)'>Delete from history</button>
         </div>
     </script>
- 
+
 </body>
 
 </html>

@@ -144,6 +144,10 @@ ul#gameTally li:last-of-type {
   border-radius:10px;
 }
 
+button {
+  margin:10px!important;
+  padding:10px;
+}
 /* Tooltip container
 li.tooltip {
   position:relative;

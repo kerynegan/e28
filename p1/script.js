@@ -80,10 +80,11 @@ const Game = {
                 this.choices.push(obj);
                 this.checkCount();
             } else {
+                this.alertClass = "oops";
                 this.errorAlert = 'You must choose a number first.';
             }
         },
-        //Checks whether the game is over. If yes, calls alert. If not, changes turn.
+        //Checks whether the game is over. If yes, calls alerts. If not, changes turn.
         checkCount() {
             this.currentNumber -= this.selection;
             this.selection = '';
@@ -98,6 +99,7 @@ const Game = {
                 }
                 this.alertGame();
             } else if (this.currentNumber < 1) {
+                //could have combined these, but thought the sassy messaging around 'bad moves' was worth keeping from my week 2 project.
                 this.gameOver = true;
                 if (this.turn == this.playerName) {
                     this.message = "Oops, that was a bad move. You lose!";
@@ -112,10 +114,10 @@ const Game = {
             }
         },
         //Changes the turn and updates a message to player.
+        //Thanks to Susan for help with the setInterval arror functionality.
         changeTurn() {
             if (this.turn == this.playerName) {
                 this.message = 'The computer is thinking...'
-                console.log('Right');
                 this.turn = 'The computer';
                 this.myInterval = setInterval(() => { this.computerTurn(); }, 1500); 
             } else {
@@ -138,6 +140,7 @@ const Game = {
             }
             this.makeSelection();
         },
+        //Once the game is over, pushes relevant stats from the game to a gameHistory array for display.
         addToHistory() {
             var obj = {
                 start: this.randomNumber,
@@ -147,6 +150,7 @@ const Game = {
             }
             this.gameCount.push(obj);
         },
+        //messaging around game wins/loss.
         alertGame() {
             if (this.winner == this.playerName) {
                 this.alertClass = 'winner';
@@ -156,18 +160,26 @@ const Game = {
             this.errorAlert = this.message;
             this.addToHistory();
         },
+        //resets game attributes to beginning states. Purposely skips the player's name, assuming the same player.
         resetGame(x) {
-            this.randomNumber = '',
-            this.currentNumber = '',
-            this.selection = '',
-            this.turn = 'player',
-            this.choices = [],
-            this.gameStarted = false,
-            this.gameOver = false,
-            this.errorAlert = '',
-            this.alertClass = '',
-            this.message = "Let's begin! Choose a number:",
-            this.winner = ''
+            this.randomNumber = '';
+            this.currentNumber = '';
+            this.selection = '';
+            this.turn = 'player';
+            this.choices = [];
+            this.gameStarted = false;
+            this.gameOver = false;
+            this.errorAlert = '';
+            this.alertClass = '';
+            this.message = "Let's play again! Choose a number:";
+            this.winner = '';
+            if (x === 'new') {
+                this.playerName = '';
+            };
+            if (x === 'all') {
+                this.playerName = '';
+                this.gameCount.length = 0;
+            };
         },
         deleteHistory(x) {
             this.gameCount = this.gameCount.filter((game) => this.gameCount.indexOf(game) != x);
