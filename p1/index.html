@@ -28,6 +28,7 @@
             <!--left side (pink background)-->
             <div class='col-md-8 justify-content-md-center'>
                 <h1>One, Two, or Three</h1>
+                <!--name inputs-->
                 <div v-if='!playerName'>
                     <p>
                         Welcome to the game!<br />
@@ -39,7 +40,7 @@
                     <button type='button' v-on:click='checkName()'>Submit</button><br>
                     <p v-if='errorAlert != ""' class="oops col-sm-5">{{errorAlert}}</p>
                 </div>
-
+                <!--range inputs-->
                 <div v-if='playerName !=""'>
                     <h3>Hello, {{ playerName }}! </h3>
                     <div v-if='!gameStarted'>
@@ -56,6 +57,7 @@
                             <button type='button' v-on:click='beginGame()'>Start the game</button>
                         </form>
                     </div>
+                    <!--running game-->
                     <div v-else-if='gameStarted'>
                         <p>The starting number is {{ randomNumber }}.</p>
                         <p>Current total: {{ currentNumber }}</p>
@@ -72,16 +74,15 @@
                                 <button type='button' v-on:click='makeSelection()'>Submit</button>
                             </form>
                         </div>
+                        <!--resetting game buttons-->
                         <div v-else>
                             <button v-if='errorAlert' v-on:click='resetGame("same")'>Play again, {{playerName}}?</button>
                             <button v-if='errorAlert' v-on:click='resetGame("new")'>Play as new player</button>
                             <button v-if='errorAlert' v-on:click='resetGame("all")'>Clear all history</button>
                         </div>
-
-
-
                     </div>
                 </div>
+                <!--game history-->
                 <div class='row' v-if='gameCount.length > 0'>
                     <h2>Game History</h2>
                     <div class='col-md-9'>
@@ -91,6 +92,7 @@
                     </div>
                 </div>
             </div>
+            <!--sidebar with directions, current game tally-->
             <div class='col-md-4'>
                 <div>
                     <h3>Directions</h3>
@@ -115,6 +117,7 @@
             </div>
         </div>
     </div>
+    <!--template for game history component-->
     <script id='game-history' type='text/x-template'>
         <div v-if='!deleted' class='col-sm-3 mx-auto'>
             <ul>
@@ -126,7 +129,5 @@
             <button v-on:click='$emit("delete-history", round)'>Delete from history</button>
         </div>
     </script>
-
 </body>
-
 </html>

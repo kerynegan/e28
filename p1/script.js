@@ -1,3 +1,4 @@
+//root Vue App
 const Game = {
     data() {
         return {
@@ -160,7 +161,7 @@ const Game = {
             this.errorAlert = this.message;
             this.addToHistory();
         },
-        //resets game attributes to beginning states. Purposely skips the player's name, assuming the same player.
+        //resets game attributes to start over. Default keeps min/max values, name, game history
         resetGame(x) {
             this.randomNumber = '';
             this.currentNumber = '';
@@ -173,14 +174,21 @@ const Game = {
             this.alertClass = '';
             this.message = "Let's play again! Choose a number:";
             this.winner = '';
+
+            //if player also wants to reset their name
             if (x === 'new') {
                 this.playerName = '';
             };
+
+            //if player wants to reset everything.
             if (x === 'all') {
                 this.playerName = '';
                 this.gameCount.length = 0;
+                this.minimumValue = 15;
+                this.maximumValue = 25;
             };
         },
+        //delete individual game history
         deleteHistory(x) {
             this.gameCount = this.gameCount.filter((game) => this.gameCount.indexOf(game) != x);
 
@@ -188,7 +196,7 @@ const Game = {
     }
 
 }
-
+//component for game history
 const GameHistory = {
     name: 'GameHistory',
     props: ['round', 'start', 'minimum', 'maximum', 'winner'],
@@ -197,12 +205,10 @@ const GameHistory = {
             deleted: false,
         }
     },
-    methods: {
-
-    },
     template: '#game-history'
 }
 
+//create app, component, and mount
 const app = Vue.createApp(Game);
 app.component('game-history', GameHistory);
 app.mount('#app');
