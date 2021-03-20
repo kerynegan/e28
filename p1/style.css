@@ -25,8 +25,8 @@ h1, h2 {
 }
 
 
-input[type="text"], 
-input[type="number"] {
+input[type='text'], 
+input[type='number'] {
   margin: 5px;
   border-radius:5px;
 }
@@ -60,6 +60,11 @@ button {
    min-width:80%;
    margin:20px 15%;
  }
+ .col-sm-5 {
+  width:50%;
+  margin:20px 30%;
+  padding:10px 0;
+}
 
 
 ul#directions li {
@@ -88,7 +93,7 @@ ul#gameTally li:last-of-type {
   font-weight:bolder;  
 }
 
-.choosey input[type="radio"] {
+.choosey input[type='radio'] {
   opacity: 0;
   position: fixed;
   width: 0;
@@ -108,12 +113,36 @@ ul#gameTally li:last-of-type {
   border:1px dotted #4b375c;
 	background-color: #dcbef5;
 }
-.choosey input[type="radio"]:focus + label, .choosey input[type="radio"]:checked + label {
+.choosey input[type='radio']:focus + label, .choosey input[type='radio']:checked + label {
   border:1px solid #476b56;
 	background-color: #9bcaae;
 }
 
+.loser {
+  background-color: #fdb6c5;
+  color:red;
+  font-weight:600;
+  font-size: 1.5em;
+  border: 1px dotted rgb(156, 52, 66);
+  border-radius:10px;
+}
 
+.winner {
+  background-color: #bdf7d0;
+  color:rgb(42, 131, 53);
+  font-weight:600;
+  font-size: 1.5em;
+  border: 1px dotted darkslategrey;
+  border-radius:10px;
+}
+.oops {
+  background-color: #b6ecfd;
+  color:rgb(41, 43, 150);
+  font-weight:600;
+  font-size: 1.5em;
+  border: 1px dotted rgb(40, 119, 150);
+  border-radius:10px;
+}
 
 /* Tooltip container
 li.tooltip {

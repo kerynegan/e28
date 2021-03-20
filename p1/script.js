@@ -11,10 +11,12 @@ const Game = {
             choices: [],
             gameStarted: false,
             gameOver: false,
-            gamemessage: '',
             errorAlert: '',
+            alertClass: '',
             message: "Let's begin! Choose a number:",
             myInterval:'',
+            gameCount: [],
+            winner: '',
             
         }   
     },
@@ -22,7 +24,7 @@ const Game = {
         //alert if name field is left empty
         checkName() {
             if(this.playerName === '') {
-                this.errorAlert = "You must enter a name.";
+                this.errorAlert = 'You must enter a name.';
             } 
         },
         //sets the first turn to the player's name, clears any error messages, and starts the game
@@ -53,10 +55,11 @@ const Game = {
                 var random = Math.random();
                 var w = this.maximumValue - this.minimumValue + 1;
                 this.randomNumber = Math.floor(random * w + this.minimumValue);
-                if (this.randomNumber <= 1) {
-                    this.message = "Oops, the random number is too low to play. Let's start again."
-                    this.gameOver = true;
                 }
+            if (this.randomNumber <= 1) {
+                this.errorAlert = "Oops, the random number is too low to play. Let's start again.";
+                this.gameOver = true;
+                this.alertClass = 'oops';
             }
             this.currentNumber = this.randomNumber;
         },
@@ -84,15 +87,26 @@ const Game = {
         checkCount() {
             this.currentNumber -= this.selection;
             this.selection = '';
-            if (this.currentNumber <= 1) {
-                if (this.turn == "player") {
-                    this.message = "The computer is stuck.";
-                    this.alertGame("Winner");
-                } else if (this.turn == "The computer") {
-                    this.message = "Ugh, you're stuck!";
-                    this.alertGame("Loser");
+            if (this.currentNumber === 1) {
+                this.gameOver = true;
+                if (this.turn == this.playerName) {
+                    this.message = 'The computer is stuck. You win!';
+                    this.winner = this.playerName;
+                } else if (this.turn == 'The computer') {
+                    this.message = "Ugh, you're stuck! You lose!";
+                    this.winner = "The Computer";
                 }
-            this.gameOver = true;
+                this.alertGame();
+            } else if (this.currentNumber < 1) {
+                this.gameOver = true;
+                if (this.turn == this.playerName) {
+                    this.message = "Oops, that was a bad move. You lose!";
+                    this.winner = "The Computer";
+                } else if (this.turn == 'The computer') {
+                    this.message = 'The computer made a bad move. You win!';
+                    this.winner = this.playerName;
+                }
+                this.alertGame();
             } else if (this.currentNumber > 1) {
                 this.changeTurn();
             }
@@ -100,11 +114,12 @@ const Game = {
         //Changes the turn and updates a message to player.
         changeTurn() {
             if (this.turn == this.playerName) {
-                this.message = "The computer is thinking..."
-                this.turn = "The computer";
-                this.myInterval = setInterval(function () { app.computerTurn(); }, 1500);
+                this.message = 'The computer is thinking...'
+                console.log('Right');
+                this.turn = 'The computer';
+                this.myInterval = setInterval(() => { this.computerTurn(); }, 1500); 
             } else {
-                this.message = "Your turn! Play a number:"
+                this.message = 'Your turn! Play a number:'
                 this.turn = this.playerName;
             }
         },
@@ -123,25 +138,55 @@ const Game = {
             }
             this.makeSelection();
         },
-        alertGame(x) {
+        addToHistory() {
+            var obj = {
+                start: this.randomNumber,
+                minimum: this.minimumValue,
+                maximum: this.maximumValue,
+                winner: this.winner, 
+            }
+            this.gameCount.push(obj);
+        },
+        alertGame() {
+            if (this.winner == this.playerName) {
+                this.alertClass = 'winner';
+            } else {
+                this.alertClass = 'loser';
+            }
+            this.errorAlert = this.message;
+            this.addToHistory();
+        },
+        resetGame(x) {
+            this.randomNumber = '',
+            this.currentNumber = '',
+            this.selection = '',
+            this.turn = 'player',
+            this.choices = [],
+            this.gameStarted = false,
+            this.gameOver = false,
+            this.errorAlert = '',
+            this.alertClass = '',
+            this.message = "Let's begin! Choose a number:",
+            this.winner = ''
+        },
+        deleteHistory(x) {
+            this.gameCount = this.gameCount.filter((game) => this.gameCount.indexOf(game) != x);
 
-        }
-        
+        },
     }
 
 }
 
 const GameHistory = {
     name: 'GameHistory',
+    props: ['round', 'start', 'minimum', 'maximum', 'winner'],
     data() {
         return {
             deleted: false,
         }
     },
     methods: {
-        deleteRound() {
-            this.deleted = true;
-        }
+
     },
     template: '#game-history'
 }
