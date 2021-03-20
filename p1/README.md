@@ -18,6 +18,5 @@
 + Styling guide for making radio selections look like buttons [from Mark Heath](https://markheath.net/post/customize-radio-button-css). (I was inspired by the demo-ed Heads or Tails game that used pictures for radio buttons in class)
 + [Google fonts](https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Merriweather&display=swap) Lora and Merriweather
 + [Favicon generator](https://favicon.io/favicon-generator/) saved me from the rabbit hole I fall into every time I open Photoshop and got rid of that annoying little '404 ico not found' warning.
-
 + *UPDATE: Ultimately not used* I heavily referenced [this tooltips styling page from W3Schools](https://www.w3schools.com/css/css_tooltip.asp) for the hover effects on the game tallies.
 + *UPDATE: Ultimately not used*  I didn't realize we could easily [use strings for list-style-items](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type) until this project. 
