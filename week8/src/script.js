@@ -1,3 +1,6 @@
+import { createApp } from 'vue'
+import RoundDetail from './components/RoundDetail.vue'
+
 const App = {
     data() {
         return {
@@ -17,8 +20,7 @@ const App = {
 }
 
 
-
 // Root Vue instance
-const app = Vue.createApp(App)
+const app = createApp(App)
 app.component('round-detail', RoundDetail);
 app.mount('#app');
