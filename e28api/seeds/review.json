@@ -1,0 +1,19 @@
+{
+    "seeds": [
+        {
+            "content": "This product was very good! I am going to keep writing to hit the 100 character minimum, but I'm not sure what else to write here. Hopefully this is long enough?",
+            "rating": 5,
+            "product_id": 1
+        },
+        {
+            "content": "This product was ok, but I think it would be better if it came in a navy blue color or had polka dots? Idk what else might help, I just only thought it was adequate, not great",
+            "rating": 3,
+            "product_id": 1
+        },
+        {
+            "content": "This product is terrrrrrrrible! Why anyone would ever order it is beyond me! My mom bought it for me and I don't like her taste. If I could return it I would. I wish I could rate this 0.",
+            "rating": 1,
+            "product_id": 2
+        }
+    ]
+}
