@@ -35,7 +35,12 @@
 
         <div v-if="showConfirmation">Your product was added</div>
 
-        {{ errors }}
+        <p v-if="errors">
+            <b>Oops, looks like something went wrong:</b>
+            <ul>
+            <li v-bind:key="error" v-for="error in errors">{{ error }}</li>
+            </ul>
+        </p>
     </div>
 </template>
 
@@ -47,16 +52,7 @@ export default {
         return {
             showConfirmation: false,
             errors: null,
-            product: {
-                name: "Candy Heart Grapes",
-                sku: "candy-heart-grapes-" + new Date().valueOf(),
-                price: 5.99,
-                available: 25,
-                weight: 2,
-                perishable: true,
-                description:
-                    "Next time the kids are craving candy, hand them a bowl of seedless Candy Heart grapes. Plump, red, and bursting with juice, they taste a little like raspberry lemonade and are just as refreshing. So go ahead and eat your heart out!",
-            },
+            product: {},
         };
     },
     methods: {
@@ -68,6 +64,7 @@ export default {
                 } else {
                     this.$emit("update-products");
                     this.showConfirmation = true;
+                    this.errors = false;
                 }
             });
         },

@@ -1,0 +1,335 @@
+{
+    "seeds": [
+        {
+            "title": "Godzilla vs. Kong",
+            "year": 2021,
+            "synopsis": "In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages." ,
+            "mpaa_rating": "PG-13",
+            "director": "Adam Wingard",
+            "tagline": "One Will Fall",
+            "genres": "Action,Science Fiction",
+            "runtime":113,
+            "tmdb_url": "https://www.themoviedb.org/movie/399566-godzilla-vs-kong?language=en-US"
+        },
+        {
+            "title": "Zack Snyder's Justice League",
+            "year": 2021,
+            "synopsis": "Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions." ,
+            "mpaa_rating": "R",
+            "director": "Zack Snyder",
+            "tagline": null,
+            "genres": "Action,Adventure,Fantasy,Science Fiction",
+            "runtime":242,
+            "tmdb_url": "https://www.themoviedb.org/movie/791373-zack-snyder-s-justice-league?language=en-US"
+        },
+        {
+            "title": "Chaos Walking",
+            "year": 2021,
+            "synopsis": "Two unlikely companions embark on a perilous adventure through the badlands of an unexplored planet as they try to escape a dangerous and disorienting reality, where all inner thoughts are seen and heard by everyone." ,
+            "mpaa_rating": "PG-13",
+            "director": "Doug Liman",
+            "tagline": "No one escapes the noise.",
+            "genres": "Science Fiction,Action,Adventure,Thriller",
+            "runtime":109,
+            "tmdb_url": "https://www.themoviedb.org/movie/412656-chaos-walking?language=en-US"
+        },
+        {
+            "title": "Tom & Jerry",
+            "year": 2021,
+            "synopsis": "Tom the cat and Jerry the mouse get kicked out of their home and relocate to a fancy New York hotel, where a scrappy employee named Kayla will lose her job if she can’t evict Jerry before a high-class wedding at the hotel. Her solution? Hiring Tom to get rid of the pesky mouse." ,
+            "mpaa_rating": "PG",
+            "director": "Tim Story",
+            "tagline": "Best of enemies. Worst of friends.",
+            "genres": "Comedy,Family,Animation",
+            "runtime":101,
+            "tmdb_url": "https://www.themoviedb.org/movie/587807-tom-jerry?language=en-US"
+        },
+        {
+            "title": "Raya and the Last Dragon",
+            "year": 2021,
+            "synopsis": "Long ago, in the fantasy world of Kumandra, humans and dragons lived together in harmony. But when an evil force threatened the land, the dragons sacrificed themselves to save humanity. Now, 500 years later, that same evil has returned and it’s up to a lone warrior, Raya, to track down the legendary last dragon to restore the fractured land and its divided people.",
+            "mpaa_rating": "PG",
+            "director": "Carlos López Estrada,Don Hall",
+            "tagline": "A quest to save her world.",
+            "genres": "Animation,Adventure,Fantasy,Family,Action",
+            "runtime":107,
+            "tmdb_url": "https://www.themoviedb.org/movie/527774-raya-and-the-last-dragon?language=en-US"
+        },
+        {
+            "title": "Cherry",
+            "year": 2021,
+            "synopsis": "Cherry drifts from college dropout to army medic in Iraq - anchored only by his true love, Emily. But after returning from the war with PTSD, his life spirals into drugs and crime as he struggles to find his place in the world.",
+            "mpaa_rating": "R",
+            "director": "Anthony Russo,Joe Russo",
+            "tagline": "Life leaves a mark.",
+            "genres": "Crime,Drama",
+            "runtime":140,
+            "tmdb_url": "https://www.themoviedb.org/movie/544401-cherry?language=en-US"
+        },
+        {
+            "title": "Sentinelle",
+            "year": 2021,
+            "synopsis": "Transferred home after a traumatizing combat mission, a highly trained French soldier uses her lethal skills to hunt down the man who hurt her sister.",
+            "mpaa_rating": "NR",
+            "director": "Julien Leclercq",
+            "tagline": null,
+            "genres": "Thriller,Action,Drama",
+            "runtime":80,
+            "tmdb_url": "https://www.themoviedb.org/movie/793723-sentinelle?language=en-US"
+        },
+        {
+            "title": "Monster Hunter",
+            "year": 2020,
+            "synopsis": "A portal transports Cpt. Artemis and an elite unit of soldiers to a strange world where powerful monsters rule with deadly ferocity. Faced with relentless danger, the team encounters a mysterious hunter who may be their only hope to find a way home.",
+            "mpaa_rating": "PG-13",
+            "director": "Paul W. S. Anderson",
+            "tagline": "Behind our world, there is another.",
+            "genres": "Fantasy,Action,Adventure",
+            "runtime":104,
+            "tmdb_url": "https://www.themoviedb.org/movie/458576-monster-hunter?language=en-US"
+        },
+        {
+            "title": "Wonder Woman 1984",
+            "year": 2020,
+            "synopsis": "A botched store robbery places Wonder Woman in a global battle against a powerful and mysterious ancient force that puts her powers in jeopardy.",
+            "mpaa_rating": "PG-13",
+            "director": "Patty Jenkins",
+            "tagline": "A new era of wonder begins.",
+            "genres": "Fantasy,Action,Adventure",
+            "runtime":151,
+            "tmdb_url": "https://www.themoviedb.org/movie/464052-wonder-woman-1984?language=en-US"
+        },
+        {
+            "title": "Space Sweepers ",
+            "year": 2021,
+            "synopsis": "When the crew of a space junk collector ship called The Victory discovers a humanoid robot named Dorothy that's known to be a weapon of mass destruction, they get involved in a risky business deal which puts their lives at stake.",
+            "mpaa_rating": "PG-13",
+            "director": "Jo Sung-hee",
+            "tagline":  "2092, the space sweep begins!",
+            "genres": "Drama,Fantasy,Science Fiction",
+            "runtime": 136,
+            "tmdb_url": "https://www.themoviedb.org/movie/581389?language=en-US"
+        },
+        {
+            "title": "Below Zero",
+            "year": 2021,
+            "synopsis": "When a prisoner transfer van is attacked, the cop in charge must fight those inside and outside while dealing with a silent foe: the icy temperatures.",
+            "mpaa_rating": "R",
+            "director": "Lluís Quílez",
+            "tagline": "Escape is not the exit.",
+            "genres": "Action,Crime,Thriller",
+            "runtime":106,
+            "tmdb_url": "https://www.themoviedb.org/movie/587996-bajocero?language=en-US"
+        },
+        {
+            "title": "Secret Magic Control Agency",
+            "year": 2021,
+            "synopsis": "The Secret Magic Control Agency sends its two best agents, Hansel and Gretel, to fight against the witch of the Gingerbread House.",
+            "mpaa_rating": "NR",
+            "director": "Alexey Tsitsilin",
+            "tagline": null,
+            "genres": "Animation,Comedy,Fantasy",
+            "runtime":104,
+            "tmdb_url": "https://www.themoviedb.org/movie/797394?language=en-US"
+        },
+        {
+            "title": "Outside the Wire",
+            "year": 2021,
+            "synopsis": "In the near future, a drone pilot is sent into a deadly militarized zone and must work with an android officer to locate a doomsday device.",
+            "mpaa_rating": "R",
+            "director": "Mikael Håfström",
+            "tagline": "Defiant by design.",
+            "genres": "Thriller,Action,Science Fiction,Fantasy",
+            "runtime":116,
+            "tmdb_url": "https://www.themoviedb.org/movie/775996-outside-the-wire?language=en-US"
+        },
+        {
+            "title": "The Little Things",
+            "year": 2021,
+            "synopsis": "Deputy Sheriff Joe 'Deke' Deacon joins forces with Sgt. Jim Baxter to search for a serial killer who's terrorizing Los Angeles. As they track the culprit, Baxter is unaware that the investigation is dredging up echoes of Deke's past, uncovering disturbing secrets that could threaten more than his case.",
+            "mpaa_rating": "R",
+            "director": "John Lee Hancock",
+            "tagline": "Some things never let us go.",
+            "genres": "Thriller,Crime",
+            "runtime":128,
+            "tmdb_url": "https://www.themoviedb.org/movie/602269-little-things?language=en-US"
+        },
+        {
+            "title": "Mortal Kombat Legends: Scorpion's Revenge",
+            "year": 2020,
+            "synopsis": "After the vicious slaughter of his family by stone-cold mercenary Sub-Zero, Hanzo Hasashi is exiled to the torturous Netherrealm. There, in exchange for his servitude to the sinister Quan Chi, he’s given a chance to avenge his family – and is resurrected as Scorpion, a lost soul bent on revenge. Back on Earthrealm, Lord Raiden gathers a team of elite warriors – Shaolin monk Liu Kang, Special Forces officer Sonya Blade and action star Johnny Cage – an unlikely band of heroes with one chance to save humanity. To do this, they must defeat Shang Tsung’s horde of Outworld gladiators and reign over the Mortal Kombat tournament.",
+            "mpaa_rating": "R",
+            "director": "Ethan Spaulding",
+            "tagline": null,
+            "genres": "Animation,Action,Fantasy",
+            "runtime":80,
+            "tmdb_url": "https://www.themoviedb.org/movie/664767-mortal-kombat-legends-scorpion-s-revenge?language=en-US"
+        },
+        {
+            "title": "Black Water: Abyss ",
+            "year": 2020,
+            "synopsis": "An adventure-loving couple convince their friends to explore a remote, uncharted cave system in the forests of Northern Australia. With a tropical storm approaching, they abseil into the mouth of the cave, but when the caves start to flood, tensions rise as oxygen levels fall and the friends find themselves trapped. Unknown to them, the storm has also brought in a pack of dangerous and hungry crocodiles.",
+            "mpaa_rating": "NR",
+            "director": "Andrew Traucki",
+            "tagline": "Descend into fear",
+            "genres": "Horror,Thriller,Adventure,Mystery",
+            "runtime":98,
+            "tmdb_url": "https://www.themoviedb.org/movie/522444-black-water-the-abyss?language=en-US"
+        },
+        {
+            "title": "The Croods: A New Age",
+            "year": 2020,
+            "synopsis": "Searching for a safer habitat, the prehistoric Crood family discovers an idyllic, walled-in paradise that meets all of its needs. Unfortunately, they must also learn to live with the Bettermans -- a family that's a couple of steps above the Croods on the evolutionary ladder. As tensions between the new neighbors start to rise, a new threat soon propels both clans on an epic adventure that forces them to embrace their differences, draw strength from one another, and survive together.",
+            "mpaa_rating": "PG",
+            "director": "Joel Crawford",
+            "tagline": "The future ain't what it used to b",
+            "genres": "Family,Fantasy,Animation,Comedy",
+            "runtime":95,
+            "tmdb_url": "https://www.themoviedb.org/movie/529203-the-croods-a-new-age?language=en-US"
+        },
+        {
+            "title": "Red Dot",
+            "year": 2021,
+            "synopsis": "On a hiking trip to rekindle their marriage, a couple find themselves fleeing for their lives in the unforgiving wilderness from an unknown shooter.",
+            "mpaa_rating": "NR",
+            "director": "Alain Darborg",
+            "tagline": null,
+            "genres": "Drama,Thriller,Horror",
+            "runtime":86,
+            "tmdb_url": "https://www.themoviedb.org/movie/649087-red-dot?language=en-US"
+        },
+        {
+            "title": "Ashfall",
+            "year": 2019,
+            "synopsis": "A group of unlikely heroes from across the Korean peninsula try to save the day after a volcano erupts on the mythical and majestic Baekdu Mountain.",
+            "mpaa_rating": "NR",
+            "director": "Lee Hae-jun,Kim Byung-seo",
+            "tagline": null,
+            "genres": "Action,Adventure,Thriller",
+            "runtime":128,
+            "tmdb_url": "https://www.themoviedb.org/movie/581387?language=en-US"
+        },
+        {
+            "title": "Breach",
+            "year": 2020,
+            "synopsis": "A hardened mechanic must stay awake and maintain an interstellar ark fleeing the dying planet Earth with a few thousand lucky souls on board... the last of humanity. Unfortunately, humans are not the only passengers. A shapeshifting alien creature has taken residence, its only goal is to kill as many people as possible. The crew must think quickly to stop this menace before it destroys mankind.",
+            "mpaa_rating": "R",
+            "director": "John Suits",
+            "tagline": "Deep in space they are not alone.",
+            "genres": "Science Fiction,Action",
+            "runtime":92,
+            "tmdb_url": "https://www.themoviedb.org/movie/651571-breach?language=en-US"
+        },
+        {
+            "title": "The Unholy",
+            "year": 2021,
+            "synopsis": "Alice, a young hearing-impaired girl who, after a supposed visitation from the Virgin Mary, is inexplicably able to hear, speak and heal the sick. As word spreads and people from near and far flock to witness her miracles, a disgraced journalist hoping to revive his career visits the small New England town to investigate. When terrifying events begin to happen all around, he starts to question if these phenomena are the works of the Virgin Mary or something much more sinister.",
+            "mpaa_rating": "PG-13",
+            "director": "Evan Spiliotopoulos",
+            "tagline": "Be careful who you pray to.",
+            "genres": "Horror",
+            "runtime":99,
+            "tmdb_url": "https://www.themoviedb.org/movie/632357-the-unholy?language=en-US"
+        },
+        {
+            "title": "Vanguard",
+            "year": 2020,
+            "synopsis": "Covert security company Vanguard is the last hope of survival for an accountant after he is targeted by the world's deadliest mercenary organization.",
+            "mpaa_rating": "PG-13",
+            "director": "Stanley Tong",
+            "tagline": null,
+            "genres": "Action,Adventure,Crime",
+            "runtime":107,
+            "tmdb_url": "https://www.themoviedb.org/movie/604822-vanguard?language=en-US"
+        },
+        {
+            "title": "Jiu Jitsu",
+            "year": 2020,
+            "synopsis": "Every six years, an ancient order of jiu-jitsu fighters joins forces to battle a vicious race of alien invaders. But when a celebrated war hero goes down in defeat, the fate of the planet and mankind hangs in the balance.",
+            "mpaa_rating": "R",
+            "director": "Dimitri Logothetis",
+            "tagline": "From the darkness, the ultimate fighter rises.",
+            "genres": "Thriller,Action,Drama",
+            "runtime":102,
+            "tmdb_url": "https://www.themoviedb.org/movie/590706-jiu-jitsu?language=en-US"
+        },
+        {
+            "title": "Soul",
+            "year": 2020,
+            "synopsis": "Joe Gardner is a middle school teacher with a love for jazz music. After a successful gig at the Half Note Club, he suddenly gets into an accident that separates his soul from his body and is transported to the You Seminar, a center in which souls develop and gain passions before being transported to a newborn child. Joe must enlist help from the other souls-in-training, like 22, a soul who has spent eons in the You Seminar, in order to get back to Earth.",
+            "mpaa_rating": "PG",
+            "director": "Pete Docter,Kemp Powers",
+            "tagline": "Is all this living really worth dying for?",
+            "genres": "Family,Animation,Comedy,Drama,Music,Fantasy",
+            "runtime":101,
+            "tmdb_url": "https://www.themoviedb.org/movie/508442-soul?language=en-US"
+        },
+        {
+            "title": "Bad Trip",
+            "year": 2021,
+            "synopsis": "Two pals embark on a road trip full of funny pranks that pull real people into mayhem.",
+            "mpaa_rating": "R",
+            "director": "Kitao Sakurai",
+            "tagline": "Friendships run deep.",
+            "genres": "Comedy",
+            "runtime":87,
+            "tmdb_url": "https://www.themoviedb.org/movie/578908-bad-trip?language=en-US"
+        },
+        {
+            "title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
+            "year": 2020,
+            "synopsis": "Harley Quinn joins forces with a singer, an assassin and a police detective to help a young girl who had a hit placed on her after she stole a rare diamond from a crime lord.",
+            "mpaa_rating": "R",
+            "director": "Cathy Yan",
+            "tagline": "Mind Over Mayhem",
+            "genres": "Action,Crime",
+            "runtime":109,
+            "tmdb_url": "https://www.themoviedb.org/movie/495764-birds-of-prey-and-the-fantabulous-emancipation-of-one-harley-quinn?language=en-US"
+        },
+        {
+            "title": "Ava",
+            "year": 2020,
+            "synopsis": "A black ops assassin is forced to fight for her own survival after a job goes dangerously wrong.",
+            "mpaa_rating": "R",
+            "director": "Tate Taylor",
+            "tagline": "Kill. Or be killed.",
+            "genres": "Action,Crime,Drama,Thriller",
+            "runtime":97,
+            "tmdb_url": "https://www.themoviedb.org/movie/539885-ava?language=en-US"
+        },
+        {
+            "title": "Tenet",
+            "year": 2020,
+            "synopsis": "Armed with only one word - Tenet - and fighting for the survival of the entire world, the Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.",
+            "mpaa_rating": "PG-13",
+            "director": "Christopher Nolan",
+            "tagline": "Time runs out.",
+            "genres": "Action,Thriller,Science Fiction",
+            "runtime":150,
+            "tmdb_url": "https://www.themoviedb.org/movie/577922-tenet?language=en-US"
+        },
+        {
+            "title": "Coming 2 America",
+            "year": 2021,
+            "synopsis": "Prince Akeem Joffer is set to become King of Zamunda when he discovers he has a son he never knew about in America – a street savvy Queens native named Lavelle. Honoring his royal father's dying wish to groom this son as the crown prince, Akeem and Semmi set off to America once again.",
+            "mpaa_rating": "PG-13",
+            "director": "Craig Brewer",
+            "tagline": "A sequel is in the heir.",
+            "genres": "Comedy",
+            "runtime":110,
+            "tmdb_url": "https://www.themoviedb.org/movie/484718-coming-2-america?language=en-US"
+        },
+        {
+            "title": "Bad Boys for Life",
+            "year": 2020,
+            "synopsis": "Marcus and Mike are forced to confront new threats, career changes, and midlife crises as they join the newly created elite team AMMO of the Miami police department to take down the ruthless Armando Armas, the vicious leader of a Miami drug cartel.",
+            "mpaa_rating": "R",
+            "director": "Adil El Arbi,Bilall Fallah",
+            "tagline": "Ride together. Die together.",
+            "genres": "Thriller,Action,Crime",
+            "runtime":124,
+            "tmdb_url": "https://www.themoviedb.org/movie/38700-bad-boys-for-life?language=en-US"
+        }
+    ]
+}
+

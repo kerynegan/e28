@@ -1,0 +1,61 @@
+{
+    "permission_level": 0,
+    "fields": {
+        "title": {
+            "type": "string",
+            "validators": [
+                "required",
+                "min:1",
+                "max:100"
+            ]
+        },
+        "year": {
+            "type": "integer",
+            "validators": [
+                "required",
+                "numeric",
+                "min:4",
+                "max:4"
+            ]
+        },
+        "synopsis": {
+            "type": "text",
+            "validators": [
+                "required",
+                "min:100"
+            ]
+        },
+        "mpaa_rating": {
+            "type": "string",
+            "validators": [
+                "required"
+            ]
+        },
+        "director": {
+            "type": "string",
+            "validators": [
+                "required"
+            ]
+        },
+        "tagline": {
+            "type": "string",
+            "validators": []
+        },
+        "genres": {
+            "type": "string",
+            "validators": [
+                "required"
+            ]
+        },
+        "runtime": {
+            "type": "integer",
+            "validators": []
+        },
+        "tmdb_url": {
+            "type": "string",
+            "validators": [
+                "required"
+            ]
+        }
+    }
+}

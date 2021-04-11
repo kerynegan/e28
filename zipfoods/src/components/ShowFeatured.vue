@@ -1,6 +1,6 @@
 <!-- src/components/ShowFeatured.vue -->
 <template>
-    <div id="show-featured">
+    <div id="show-featured" v-if="products">
         <h2>Featured Products</h2>
         <ul class="clean-list">
             <li v-for="product in featuredProducts" v-bind:key="product.id">
@@ -11,17 +11,20 @@
 </template>
 
 <script>
-import { products } from '@/common/products.js';
+
 export default {
+
     props: {
         category: {
             type: String,
         },
+        products: {
+            type: Array,
+            defaulst: null,
+        },
     },
     data() {
-        return {
-            products: products,
-        }
+        return {};
     },
     computed: {
         featuredProducts() {

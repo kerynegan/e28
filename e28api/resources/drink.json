@@ -1,0 +1,9 @@
+{
+    "permission_level": 0,
+    "fields": {
+        "name": {
+            "type":"string",
+            "validators": []
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "permission_level": 0,
+    "fields": {
+        "user_id": {
+            "type": "integer",
+            "validators": [
+                "required",
+                "numeric"
+            ]
+        },
+        "meal_id": {
+            "type": "integer",
+            "validators": [
+                "numeric"
+            ]
+        },
+        "movie_id": {
+            "type": "integer",
+            "validators": [
+                "numeric"
+            ]
+        },
+        "drink_id": {
+            "type": "integer",
+            "validators": [
+                "numeric"
+            ]
+        }
+    }
+}

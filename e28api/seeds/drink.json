@@ -1,0 +1,19 @@
+{
+    "seeds": [
+        {
+            "name": "Bloody Mary"          
+        },
+        {
+            "name": "Screwdriver"          
+        },
+        {
+            "name": "Margarita"          
+        },
+        {
+            "name": "Mai Tai"          
+        },
+        {
+            "name": "John Daly"          
+        }
+    ]
+}

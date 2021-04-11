@@ -12,10 +12,16 @@
 *List the features in your application that are persisting and retrieving data from the server*
 
 ## Outside resources
-*Your list of outside resources go here*
++ All movie data is from [The Movie Database](https://www.themoviedb.org/). They have a free API, but I created the seed manually from some of their data instead.
++ All recipe data is from Spoonacular
++ All drink data is from CocktailsDB
++ All gradient code created thanks to [CSS Gradient](https://cssgradient.io/).
++ [Emits documentation](https://v3.vuejs.org/guide/migration/emits-option.html#_2-x-behavior) for the user change buttons 
 
 ## Notes for instructor
 *Any notes for me to refer to while grading; if none, omit this section*
+
+*reminder for Keryn - split both director and genres on commas* 
 
 
 

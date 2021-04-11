@@ -9,6 +9,16 @@
             "name": "Jamal Harvard",
             "email": "jamal@harvard.edu",
             "password": "asdfasdf"
+        },
+        {
+            "name": "Sandy DCE",
+            "email": "sandy@extension.edu",
+            "password": "asdfasdf"
+        },
+        {
+            "name": "Robert DCE",
+            "email": "robert@extension.edu",
+            "password": "asdfasdf"
         }
     ]
 }
