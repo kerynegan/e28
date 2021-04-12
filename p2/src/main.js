@@ -9,17 +9,17 @@ import MoviesPage from '@/components/pages/MoviesPage.vue';
 import DrinksPage from '@/components/pages/DrinksPage.vue';
 import MealsPage from '@/components/pages/MealsPage.vue';
 import MatchesPage from '@/components/pages/MatchesPage.vue';
-
+import CreditsPage from '@/components/pages/CreditsPage.vue';
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [
         { path: '/', component: HomePage },
         { path: '/movies', component: MoviesPage },
-        { path: '/movies/:id', component: MoviesPage },
         { path: '/drinks', component: DrinksPage },
         { path: '/meals', component: MealsPage },
         { path: '/matches', component: MatchesPage },
+        { path: '/credits', component: CreditsPage },
     ]
 })
 

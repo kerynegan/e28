@@ -29,14 +29,28 @@
       </nav>
     </div>
     <div id="main">
-      <router-view></router-view>
+        <router-view 
+            v-bind:movies="movies"
+            v-on:update-movies="loadMovies"
+            v-bind:meals="meals"
+            v-on:update-meals="loadMeals"
+            v-bind:drinks="drinks"
+            v-on:update-drinks="loadDrinks"
+            v-bind:selections="selections"
+            v-on:update-selections="loadSelections"
+            v-on:select-movie="selectMovie($event)"
+            v-on:select-meal="selectMeal($event)"
+            v-on:select-drink="selectDrink($event)"
+            v-bind:show-confirmation="showConfirmation"
+        ></router-view>
     </div>
-
+    <div id="footer">
+      <p>Copyright (c) Keryn Egan 2021&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Created for DGMD E-28 Spring 2021&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="/credits">Credits Page</a></p>
+    </div>
   </div>
 </template>
 
 <script>
-
 import { axios } from "@/common/app.js";
 
 export default {
@@ -48,6 +62,7 @@ export default {
             drinks: [],
             meals: [],
             selections:[],
+            showConfirmation: false,
 
             /* Store links in an array to maintain order */
             links: ["home", "movies", "drinks", "meals", "matches"],
@@ -58,6 +73,7 @@ export default {
                 movies: "/movies",
                 drinks: "/drinks",
                 meals: "/meals",
+                selections: "/selections",
                 matches: "/matches",
             },
         };
@@ -89,6 +105,45 @@ export default {
             axios.get("selection").then((response) => {
                 this.selections = response.data.selection;
             });
+        },
+        selectMovie(x){
+          axios.post('/selection', {
+            user_id: this.userID,
+            movie_id: x
+            }).then((response) => {
+            if (response.data.errors) {
+                this.errors = response.data.errors;
+            } else {
+                this.showConfirmation = true;
+                this.loadMovies();
+            }
+          });
+        },
+        selectMeal(x){
+          axios.post('/selection', {
+            user_id: this.userID,
+            meal_id: x
+            }).then((response) => {
+            if (response.data.errors) {
+                this.errors = response.data.errors;
+            } else {
+                this.showConfirmation = true;
+                this.loadMeals();
+            }
+          });
+        },
+        selectDrink(x){
+          axios.post('/selection', {
+            user_id: this.userID,
+            drink_id: x
+            }).then((response) => {
+            if (response.data.errors) {
+                this.errors = response.data.errors;
+            } else {
+                this.showConfirmation = true;
+                this.loadDrinks();
+            }
+          });
         }
     },
 };

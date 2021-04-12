@@ -45,18 +45,6 @@
                 "required"
             ]
         },
-        "ingredients": {
-            "type": "text",
-            "validators": [
-                "required"
-            ]
-        },
-        "instructions": {
-            "type": "text",
-            "validators": [
-                "required"
-            ]
-        },
         "spoonacular_url": {
             "type": "string",
             "validators": [

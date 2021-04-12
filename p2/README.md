@@ -17,6 +17,7 @@
 + All drink data is from CocktailsDB
 + All gradient code created thanks to [CSS Gradient](https://cssgradient.io/).
 + [Emits documentation](https://v3.vuejs.org/guide/migration/emits-option.html#_2-x-behavior) for the user change buttons 
++ [Combining .split() and .join() via StackOverflow](https://stackoverflow.com/questions/10982913/javascript-how-to-show-each-element-of-array-on-a-new-line) for a nicer display of the movie genres
 
 ## Notes for instructor
 *Any notes for me to refer to while grading; if none, omit this section*
