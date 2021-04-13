@@ -14,16 +14,34 @@
                 "numeric"
             ]
         },
+        "meal_decision": {
+            "type": "string",
+            "validators": [
+                "alpha"
+            ]
+        },
         "movie_id": {
             "type": "integer",
             "validators": [
                 "numeric"
             ]
         },
+        "movie_decision": {
+            "type": "string",
+            "validators": [
+                "alpha"
+            ]
+        },
         "drink_id": {
             "type": "integer",
             "validators": [
                 "numeric"
+            ]
+        },
+        "drink_decision": {
+            "type": "string",
+            "validators": [
+                "alpha"
             ]
         }
     }

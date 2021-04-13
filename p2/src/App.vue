@@ -39,7 +39,7 @@
             v-bind:selections="selections"
             v-on:update-selections="loadSelections"
             v-on:select-movie="selectMovie($event)"
-            v-on:reload-movies="loadMovies($event)"
+            v-on:reject-movie="rejectMovie($event)"
             v-on:select-meal="selectMeal($event)"
             v-on:select-drink="selectDrink($event)"
             v-bind:show-confirmation="showConfirmation"
@@ -107,20 +107,34 @@ export default {
                 this.selections = response.data.selection;
             });
         },
-        selectMovie(x){
+        selectMovie(x){   
           axios.post('/selection', {
             user_id: this.userID,
-            movie_id: x
+            movie_id: x, 
+            movie_decision: "selected"
             }).then((response) => {
             if (response.data.errors) {
                 this.errors = response.data.errors;
             } else {
-                this.showConfirmation = true;
-                this.loadMovies();
+                this.showConfirmation = true
+            }
+          });
+        },
+        rejectMovie(x){   
+          axios.post('/selection', {
+            user_id: this.userID,
+            movie_id: x, 
+            movie_decision: "rejected"
+            }).then((response) => {
+            if (response.data.errors) {
+                this.errors = response.data.errors;
+            } else {
+                this.showConfirmation = true
             }
           });
         },
         selectMeal(x){
+        
           axios.post('/selection', {
             user_id: this.userID,
             meal_id: x
