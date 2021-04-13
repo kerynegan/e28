@@ -85,7 +85,8 @@ nav ul li a.router-link-active:active {
     padding:25px;
 }
 #dev_user button,
-button.yes {
+button.yes,
+button.no {
     min-width:100px;
     width:100px;
     margin: 0 10px;
@@ -93,11 +94,16 @@ button.yes {
     background: rgb(255,120,156);
     background: linear-gradient(0deg, rgba(255,120,156,1) 56%, rgba(254,212,76,1) 100%);
 	border-radius:10px;
-	border:1px solid rgb(255,120,156);
+	border:1px solid rgba(254,212,76);
 	display:inline-block;
 	text-decoration:none;
     font-size:1.1em;
     color:#fff;
+}
+button.no {
+    background: rgb(73,224,247);
+    background: linear-gradient(180deg, rgba(73,224,247,1) 5%, rgba(158,76,254,1) 100%);
+    border:1px solid rgb(73,224,247);
 }
 .show-movie,
 .show-meal,

@@ -16,6 +16,7 @@ const router = createRouter({
     routes: [
         { path: '/', component: HomePage },
         { path: '/movies', component: MoviesPage },
+        { path: '/movies/:id', component: MoviesPage, redirect: '/movies' },
         { path: '/drinks', component: DrinksPage },
         { path: '/meals', component: MealsPage },
         { path: '/matches', component: MatchesPage },

@@ -39,6 +39,7 @@
             v-bind:selections="selections"
             v-on:update-selections="loadSelections"
             v-on:select-movie="selectMovie($event)"
+            v-on:reload-movies="loadMovies($event)"
             v-on:select-meal="selectMeal($event)"
             v-on:select-drink="selectDrink($event)"
             v-bind:show-confirmation="showConfirmation"
@@ -126,6 +127,7 @@ export default {
             }).then((response) => {
             if (response.data.errors) {
                 this.errors = response.data.errors;
+                this.displayRandom("meal")
             } else {
                 this.showConfirmation = true;
                 this.loadMeals();
@@ -139,6 +141,7 @@ export default {
             }).then((response) => {
             if (response.data.errors) {
                 this.errors = response.data.errors;
+                this.displayRandom("drink")
             } else {
                 this.showConfirmation = true;
                 this.loadDrinks();
