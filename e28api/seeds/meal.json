@@ -2,13 +2,147 @@
     "seeds": [
         {
             "name": "Instant Pot BBQ Chicken Thighs",
-            "author": "Pink When",
             "total_time":25,
             "serving_size":4,
             "keywords":"gluten-free,dairy-free,gluten free,dairy free",    
             "category": "lunch,main course,main dish,dinner" ,     
-            "description":"Instant Pot BBQ Chicken Thighs might be just the main course you are searching for. This recipe serves 4 and costs $1.1 per serving. One portion of this dish contains around 24g of protein, 24g of fat, and a total of 450 calories. This recipe is liked by 1 foodies and cooks. It is brought to you by Pink When. It is a good option if you're following a gluten free and dairy free diet. A mixture of bbq sauce, chicken thighs, pepper, and a handful of other ingredients are all it takes to make this recipe so scrumptious. From preparation to the plate, this recipe takes around 25 minutes. Taking all factors into account, this recipe earns a spoonacular score of 0%, which is improvable.",
+            "description":"Instant Pot BBQ Chicken Thighs might be just the main course you are searching for. This recipe serves 4 and costs $1.1 per serving. One portion of this dish contains around 24g of protein, 24g of fat, and a total of 450 calories. This recipe is liked by 1 foodies and cooks. It is brought to you by Pink When. It is a good option if you're following a gluten free and dairy free diet. A mixture of bbq sauce, chicken thighs, pepper, and a handful of other ingredients are all it takes to make this recipe so scrumptious. From preparation to the plate, this recipe takes around 25 minutes.",
             "spoonacular_url": "https://spoonacular.com/recipes/instant-pot-bbq-chicken-thighs-1515523"
+        },
+        {
+            "name": "Crispy Garlic Smashed Potatoes",
+            "total_time":50,
+            "serving_size":6,
+            "keywords":"gluten-free,gluten free,yukon gold potatoes, olive oil, garlic, salt, parmesan cheese, butter, salt and pepper, parsley",    
+            "category": "side dish" ,     
+            "description":"If you have around 50 minutes to spend in the kitchen, Crispy Garlic Smashed Potatoes might be an awesome gluten free recipe to try. This recipe serves 6. This side dish has 187 calories, 4g of protein, and 7g of fat per serving. For 50 cents per serving, this recipe covers 9% of your daily requirements of vitamins and minerals. 1 person were glad they tried this recipe. Head to the store and pick up yukon gold potatoes, salt and pepper, garlic, and a few other things to make it today.",
+            "spoonacular_url": "https://spoonacular.com/recipes/crispy-garlic-smashed-potatoes-1514457"
+        },
+        {
+            "name": "Air Fryer Chicken Strips",
+            "total_time":37,
+            "serving_size":4,
+            "keywords":"chicken strips, panko, breadcrumbs, eggs, milk, cayenne, pepper, salt, pepper, paprika, garlic powder, onion powder",    
+            "category": "lunch,main course,main dish,dinner" ,     
+            "description":"Air Fryer Chicken Strips might be just the main course you are searching for. For $2.4 per serving, this recipe covers 24% of your daily requirements of vitamins and minerals. This recipe makes 4 servings with 329 calories, 40g of protein, and 9g of fat each. Not a lot of people made this recipe, and 1 would say it hit the spot. A mixture of chicken strips, pepper, breadcrumbs, and a handful of other ingredients are all it takes to make this recipe so scrumptious. From preparation to the plate, this recipe takes approximately 37 minutes.",
+            "spoonacular_url": "https://spoonacular.com/recipes/air-fryer-chicken-strips-1507411"
+        },
+        {
+            "name": "Easy Baked Spaghetti",
+            "total_time":70,
+            "serving_size":6,
+            "keywords":"spaghetti noodles, ground beef, tomato sauce, oregano, pepper, ricotta cheese, cream cheese, cream, cheddar cheese, butter, parsley",    
+            "category": "side dish,lunch,main course,main dish,dinner" ,     
+            "description":"Easy Baked Spaghetti is a main course that serves 6. One serving contains 784 calories, 39g of protein, and 54g of fat. For $2.55 per serving, this recipe covers 26% of your daily requirements of vitamins and minerals. This recipe from Pink When requires spaghetti noodles, ground beef, cream cheese, and oregano. From preparation to the plate, this recipe takes approximately 1 hour and 10 minutes. Only a few people made this recipe, and 1 would say it hit the spot.",
+            "spoonacular_url": "https://spoonacular.com/recipes/easy-baked-spaghetti-1506695"
+        },
+        {
+            "name": "Ground Beef Street Tacos",
+            "total_time":20,
+            "serving_size":6,
+            "keywords":"gluten-free,gluten free,ground beef, corn tortillas",    
+            "category": "lunch,main course,main dish,dinner" ,     
+            "description":"You can never have too many main course recipes, so give Ground Beef Street Tacos a try. This recipe makes 6 servings with 255 calories, 28g of protein, and 8g of fat each. For $1.78 per serving, this recipe covers 16% of your daily requirements of vitamins and minerals. 1 person found this recipe to be tasty and satisfying. From preparation to the plate, this recipe takes around 20 minutes. Head to the store and pick up lime juice, corn tortillas 4, taco seasoning, and a few other things to make it today. It is brought to you by Pink When. This recipe is typical of Mexican cuisine. It is a good option if you're following a gluten free diet.",
+            "spoonacular_url": "https://spoonacular.com/recipes/ground-beef-street-tacos-1505411"
+        },
+        {
+            "name": "Easy Italian Meatballs",
+            "total_time":45,
+            "serving_size":8,
+            "keywords":"ground beef, sausage, almond flour, garlic, eggs, flat leaf parsley, parmigiano-reggiano, salt, ground pepper",    
+            "category": "lunch,main course,main dish,dinner",     
+            "description":"Easy Italian Meatballs might be just the Mediterranean recipe you are searching for. For 71 cents per serving, this recipe covers 8% of your daily requirements of vitamins and minerals. This recipe makes 8 servings with 238 calories, 13g of protein, and 18g of fat each. It works well as a cheap main course. This recipe from Pink When requires flat leaf parsley, parmigiano-reggiano, almond flour, and ground pepper. From preparation to the plate, this recipe takes approximately 45 minutes. 1 person has made this recipe and would make it again.",
+            "spoonacular_url": "https://spoonacular.com/recipes/easy-italian-meatballs-1504227"
+        },
+        {
+            "name": "Cheesy Chicken Enchilada Quinoa Casserole",
+            "total_time":30,
+            "serving_size":4,
+            "keywords":"fall,winter,gluten-free,popular,gluten free",    
+            "category": "lunch,main course,main dish,dinner" ,     
+            "description":"Cheesy Chicken Enchilada Quinoa Casserole might be just the main course you are searching for. This gluten free recipe serves 4 and costs $2.62 per serving. One serving contains 594 calories, 34g of protein, and 24g of fat. Autumn will be even more special with this recipe. 9912 people have tried and liked this recipe. From preparation to the plate, this recipe takes about 30 minutes. Head to the store and pick up chili powder, cumin, verde enchilada sauce, and a few other things to make it today.",
+            "spoonacular_url": "https://spoonacular.com/Cheesy-Chicken-Enchilada-Quinoa-Casserole-715421"
+        },
+        {
+            "name": "Garlic Roasted Salmon & Brussels Sprouts",
+            "total_time":45,
+            "serving_size":6,
+            "keywords":"gluten-free,dairy-free,healthy,popular,pescetarian,gluten free,dairy free,pescatarian,brussels sprouts, garlic, lemon wedges, olive oil, oregano, pepper, salmon fillet, salt, white wine",    
+            "category": "lunch,main course,main dish,dinner" ,     
+            "description":"Garlic Roasted Salmon & Brussels Sprouts might be just the main course you are searching for. For $4.74 per serving, this recipe covers 37% of your daily requirements of vitamins and minerals. This recipe makes 6 servings with 374 calories, 34g of protein, and 19g of fat each. This recipe is liked by 21619 foodies and cooks. From preparation to the plate, this recipe takes approximately 45 minutes. Head to the store and pick up brussels sprouts, oregano, olive oil, and a few other things to make it today. To use up the salt you could follow this main course with the Apple Turnovers Recipe as a dessert. It is a good option if you're following a caveman, gluten free, dairy free, and primal diet.",
+            "spoonacular_url": "https://spoonacular.com/recipes/garlic-roasted-salmon-brussels-sprouts-695463"
+        },        
+        {
+            "name": "Shrimp, tomato, and spinach pasta in garlic butter sauce",
+            "total_time":60,
+            "serving_size":4,
+            "keywords":"popular,pescetarian,pescatarian",    
+            "category": "lunch,main course,main dish,dinner" ,     
+            "description":"You can never have too many main course recipes, so give Shrimp, tomato, and spinach pastan in garlic butter sauce a try. This recipe makes 4 servings with 500 calories, 39g of protein, and 10g of fat each. For $3.47 per serving, this recipe covers 30% of your daily requirements of vitamins and minerals. From preparation to the plate, this recipe takes around 1 hour. 861269 people were impressed by this recipe. Head to the store and pick up spinach, olive oil, lemon, and a few other things to make it today.",
+            "spoonacular_url": "https://spoonacular.com/recipes/shrimp-tomato-and-spinach-pasta-in-garlic-butter-sauce-736047"
+        },        
+        {
+            "name": "Shrimp Enchiladas with Creamy Poblano Sauce",
+            "total_time":35,
+            "serving_size":12,
+            "keywords":"popular,butter, all purpose flour, low sodium chicken broth, poblano, sour cream, garlic powder, salt and pepper, pepper jack cheese, cilantro, shrimp, oil, white onions, garlic, carrots, baby spinach, hot sauce, whole wheat flour",    
+            "category": "lunch,main course,main dish,dinner" ,     
+            "description":"If you want to add more Mexican recipes to your repertoire, Shrimp Enchiladas with Creamy Poblano Sauce might be a recipe you should try. This recipe serves 12 and costs $1.56 per serving. One portion of this dish contains about 14g of protein, 14g of fat, and a total of 201 calories. It works well as a rather inexpensive main course. A mixture of oil, cream, flour, and a handful of other ingredients are all it takes to make this recipe so yummy. 132501 person were glad they tried this recipe. It is brought to you by Little Spice Jar. From preparation to the plate, this recipe takes about 35 minutes.",
+            "spoonacular_url": "https://spoonacular.com/recipes/shrimp-enchiladas-with-creamy-poblano-sauce-864638"
+        },        
+        {
+            "name": "Steak Fajita Bowls with Garlic Lime Rice",
+            "total_time":20,
+            "serving_size":6,
+            "keywords":"valentine's day,father's day,gluten-free,popular,gluten free",    
+            "category": "" ,     
+            "description":"Forget going out to eat or ordering takeout every time you crave Mexican food. Try making Steak Fajita Bowls with Garlic Lime Rice at home. This recipe makes 6 servings with 285 calories, 12g of protein, and 8g of fat each. For $1.49 per serving, this recipe covers 9% of your daily requirements of vitamins and minerals. 48671 person have made this recipe and would make it again. A mixture of recipe steak fajitas, parboiled rice, salt, and a handful of other ingredients are all it takes to make this recipe so yummy. It will be a hit at your valentin day event. It is a good option if you're following a gluten free diet. It is brought to you by Little Spice Jar. From preparation to the plate, this recipe takes about 20 minutes.",
+            "spoonacular_url": "https://spoonacular.com/recipes/steak-fajita-bowls-with-garlic-lime-rice-818516"
+        },        
+        {
+            "name": "Crispy Rolled Shrimp Tacos",
+            "total_time":25,
+            "serving_size":4,
+            "keywords":"gluten-free,dairy-free,popular,pescetarian,gluten free,dairy free,pescatarian",    
+            "category": "lunch,main course,main dish,dinner" ,     
+            "description":"The recipe Crispy Rolled Shrimp Tacos could satisfy your Mexican craving in approximately 25 minutes. One portion of this dish contains about 28g of protein, 8g of fat, and a total of 308 calories. For $3.32 per serving, this recipe covers 22% of your daily requirements of vitamins and minerals. This recipe serves 4. Plenty of people made this recipe, and 9395 would say it hit the spot. Head to the store and pick up garlic, cumin, cilantro, and a few other things to make it today. To use up the salt you could follow this main course with the Apple Turnovers Recipe as a dessert. It works well as a main course. It is a good option if you're following a gluten free, dairy free, and pescatarian diet.",
+            "spoonacular_url": "https://spoonacular.com/recipes/crispy-rolled-shrimp-tacos-248563"
+        },        
+        {
+            "name": "Scalloped Potatoes with Ham & Cheese",
+            "total_time":110,
+            "serving_size":8,
+            "keywords":"easter,gluten-free,popular,gluten free",    
+            "category": "lunch,main course,main dish,dinner" ,     
+            "description":"Scalloped Potatoes with Ham & Cheese might be just the side dish you are searching for. Watching your figure? This gluten free recipe has 405 calories, 27g of protein, and 15g of fat per serving. For $2.54 per serving, this recipe covers 18% of your daily requirements of vitamins and minerals. Many people made this recipe, and 6713 would say it hit the spot. From preparation to the plate, this recipe takes roughly 1 hour and 50 minutes. It can be enjoyed any time, but it is especially good for Easter. A mixture of seasoned salt, potatoes, condensed cream of potato soup, and a handful of other ingredients are all it takes to make this recipe so flavorful.",
+            "spoonacular_url": "https://spoonacular.com/recipes/scalloped-potatoes-with-ham-cheese-691466"
+        },
+        {
+            "name": "Sesame Crusted Tuna & Avocado with Spicy Sesame Zucchini Noodles",
+            "total_time":25,
+            "serving_size":1,
+            "keywords":"healthy,popular,pescetarian,pescatarian",    
+            "category": "lunch,main course,main dish,dinner" ,     
+            "description":"Sesame Crusted Tuna & Avocado with Spicy Sesame Zucchini Noodles is a pescatarian main course. One serving contains 796 calories, 51g of protein, and 56g of fat. This recipe serves 1 and costs $8.62 per serving. 4427 people have tried and liked this recipe. Head to the store and pick up tuna steak, pepper flakes, sesame seeds, and a few other things to make it today. To use up the zucchini you could follow this main course with the Zucchini Dessert Squares as a dessert. From preparation to the plate, this recipe takes roughly 25 minutes.",
+            "spoonacular_url": "https://spoonacular.com/recipes/sesame-crusted-tuna-avocado-with-spicy-sesame-zucchini-noodles-563868"
+        },
+        {
+            "name": "Stuffed Zucchini with Turkey Sausage",
+            "total_time":65,
+            "serving_size":4,
+            "keywords":"gluten-free,popular,gluten free",    
+            "category": "side dish,lunch,main course,main dish,dinner" ,     
+            "description":"The recipe Stuffed Zucchini with Turkey Sausage can be made in about 1 hour and 5 minutes. One serving contains 351 calories, 37g of protein, and 19g of fat. This gluten free recipe serves 4 and costs $3.13 per serving. Head to the store and pick up egg, mushrooms, pepper, and a few other things to make it today. This recipe from Simply Recipes has 2284 fans.",
+            "spoonacular_url": "https://spoonacular.com/recipes/stuffed-zucchini-with-turkey-sausage-245131"
+        },
+        {
+            "name": "Shrimp Fiesta Quesadillas",
+            "total_time":30,
+            "serving_size":4,
+            "keywords":"popular,pescetarian,pescatarian",    
+            "category": "lunch,main course,main dish,dinner" ,     
+            "description":"Shrimp Fiesta Quesadillas might be just the Mexican recipe you are searching for. For $3.66 per serving, you get a hor d'oeuvre that serves 4. Watching your figure? This pescatarian recipe has 506 calories, 39g of protein, and 21g of fat per serving. 1310 people have made this recipe and would make it again. A mixture of butter, shrimp, bell pepper, and a handful of other ingredients are all it takes to make this recipe so scrumptious. To use up the onion you could follow this main course with the Candy Corn Cupcakes as a dessert. From preparation to the plate, this recipe takes about 30 minutes.",
+            "spoonacular_url": "https://spoonacular.com/recipes/shrimp-fiesta-quesadillas-560222"
         }
     ]
 }

@@ -1,4 +1,5 @@
 <template>
+<!--Nothing particularly special here. I just wanted to add a page for the data credits so it doesn't just live in my README.md-->
     <div id="credits-page">
         <h1>Credits</h1>
         <p>All thanks and credit for the seed information for the following items belongs to:</p>

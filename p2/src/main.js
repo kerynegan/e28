@@ -18,8 +18,12 @@ const router = createRouter({
         { path: '/movies', component: MoviesPage },
         { path: '/movies/:id', component: MoviesPage, redirect: '/movies' },
         { path: '/drinks', component: DrinksPage },
+        { path: '/drinks/:id', component: DrinksPage, redirect: '/drinks' },
         { path: '/meals', component: MealsPage },
+        { path: '/meals/:id', component: MealsPage, redirect: '/meals' },
         { path: '/matches', component: MatchesPage },
+        //for now, this page redirects. Later, the ID will correspond to a user's ID and return their matches.
+        { path: '/matches/:id', component: MatchesPage, redirect: '/matches'},       
         { path: '/credits', component: CreditsPage },
     ]
 })

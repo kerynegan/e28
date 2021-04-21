@@ -9,12 +9,6 @@
                 "max:100"
             ]
         },
-        "author": {
-            "type": "string",
-            "validators": [
-                "required"
-            ]
-        },
         "total_time": {
             "type": "integer",
             "validators": [
@@ -30,13 +24,11 @@
         "keywords": {
             "type": "text",
             "validators": [
-                "required"
             ]
         },    
         "category": {
             "type": "text",
             "validators": [
-                "required"
             ]
         },     
         "description": {

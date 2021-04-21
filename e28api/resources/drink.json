@@ -3,7 +3,33 @@
     "fields": {
         "name": {
             "type":"string",
-            "validators": []
+            "validators": [
+                "required"
+            ]
+        },
+        "ingredients": {
+            "type":"text",
+            "validators": [
+                "required"
+            ]
+        },
+        "instructions": {
+            "type":"text",
+            "validators": [
+                "required"
+            ]
+        },
+        "glass": {
+            "type":"string",
+            "validators": [
+                "required"
+            ]
+        },
+        "cocktailDB_url": {
+            "type":"string",
+            "validators": [
+                "required"
+            ]
         }
     }
 }

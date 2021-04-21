@@ -1,19 +1,109 @@
 {
     "seeds": [
         {
-            "name": "Bloody Mary"          
+            "name": "Mojito",
+            "ingredients": "2-3oz Light Rum, Juice of 1 Lime, 2 tsp Sugar, 2-4 Mint leaves, Soda Water",
+            "instructions": "Muddle mint leaves with sugar and lime juice,Add a splash of soda water and fill the glass with cracked ice,Pour the rum and top with soda water,Garnish and serve with straw.",
+            "glass": "Highball glass" ,
+            "cocktailDB_url": "https://www.thecocktaildb.com/drink/11000-Mojito-Cocktail"
         },
         {
-            "name": "Screwdriver"          
+            "name": "Old Fashioned",
+            "ingredients": "4.5 cL Bourbon,2 dashes Angostura bitters,1 cub Sugar,dash Water",
+            "instructions": "Place sugar cube in old fashioned glass and saturate with bitters, add a dash of plain water,Muddle until dissolved,Fill the glass with ice cubes and add whiskey,Garnish with orange twist, and a cocktail cherry.",
+            "glass": "Old-fashioned glass" ,
+            "cocktailDB_url": "https://www.thecocktaildb.com/drink/11001-Old-Fashioned-Cocktail"      
         },
         {
-            "name": "Margarita"          
+            "name": "Long Island Tea",
+            "ingredients": "1/2oz Vodka,1/2oz Light Rum,1/2oz Gin,1/2oz Tequila,Juice of 1/2 Lemon,1 splash Coca-Cola",
+            "instructions": "Combine all ingredients (except cola) and pour over ice in a highball glass,Add the splash of cola for color,Decorate with a slice of lemon and serve.",
+            "glass": "Highball glass" ,
+            "cocktailDB_url": "https://www.thecocktaildb.com/drink/11002-Long-Island-Tea-Cocktail"         
         },
         {
-            "name": "Mai Tai"          
+            "name": "Negroni",
+            "ingredients": "1oz Gin, 1oz Campari, 1oz Sweet Vermouth",
+            "instructions": "Stir into glass over ice, garnish and serve.",
+            "glass": "Old-fashioned glass" ,
+            "cocktailDB_url": "https://www.thecocktaildb.com/drink/11003-Negroni-Cocktail"          
         },
         {
-            "name": "John Daly"          
+            "name": "Whiskey Sour",
+            "ingredients": "2 oz Blended whiskey,Juice of 1/2 Lemon,1/2 tsp Powdered sugar,1 Cherry,1/2 slice Lemon",
+            "instructions": "Shake with ice,Strain into chilled glass, garnish and serve,If served 'On the rocks' strain ingredients into old-fashioned glass filled with ice.",
+            "glass": "Old-fashioned glass" ,
+            "cocktailDB_url": "https://www.thecocktaildb.com/drink/11004-Whiskey-Sour-Cocktail"        
+        },
+        {
+            "name": "Dry Martini",
+            "ingredients": "1 2/3 oz Gin,1/3 oz Dry Vermouth,1 Olive",
+            "instructions": "Straight: Pour all ingredients into mixing glass with ice cubes,Stir well,Strain in chilled martini cocktail glass,Squeeze oil from lemon peel onto the drink, or garnish with olive.",
+            "glass": "Cocktail glass" ,
+            "cocktailDB_url": "https://www.thecocktaildb.com/drink/11005-Dry-Martini-Cocktail"      
+        },
+        {
+            "name": "Daiquiri",
+            "ingredients": "1 1/2 oz Light rum,Juice of 1/2 Lime,1 tsp Powdered sugar",
+            "instructions": "Pour all ingredients into shaker with ice cubes,Shake well,Strain in chilled cocktail glass.",
+            "glass": "Cocktail glass" ,
+            "cocktailDB_url": "https://www.thecocktaildb.com/drink/11006-Daiquiri-Cocktail"         
+        },
+        {
+            "name": "Margarita",
+            "ingredients": "1 1/2 oz Tequila,1/2 oz Triple sec,1 oz Lime juice,Salt",
+            "instructions": " Rub the rim of the glass with the lime slice to make the salt stick to it,Take care to moisten only the outer rim and sprinkle the salt on it,The salt should present to the lips of the imbiber and never mix into the cocktail.Shake the other ingredients with ice then carefully pour into the glass.",
+            "glass": "Cocktail glass" ,
+            "cocktailDB_url": "https://www.thecocktaildb.com/drink/11007-Margarita-Cocktail"          
+        },
+        {
+            "name": "The Galah",
+            "ingredients": "1 shot Dark Rum,1 shot Campari,1/2 shot Creme De Banane.Top Pineapple Juice,Top Lime Juice",
+            "instructions": "Mix together the alcoholic portions and top with Pineapple and Lime juice.",
+            "glass": "Collins glass" ,
+            "cocktailDB_url": "https://www.thecocktaildb.com/Drink/178350-The-Galah-Cocktail"         
+        },
+        {
+            "name": "Winter Rita",
+            "ingredients": "1 2/3 oz Tequila,1/4 oz Campari,3/4 oz Lime Juice,1/2 oz Orange Juice,1/2 oz Rosemary Syrup,Dash Salt",
+            "instructions": "Salt rim,Combine all ingredients,Shake with ice and strain over fresh ice.",
+            "glass": "Highball glass" ,
+            "cocktailDB_url": "https://www.thecocktaildb.com/Drink/178347-Winter-Rita-Cocktail"      
+        },
+        {
+            "name": "Winter Paloma",
+            "ingredients": "2 shots Tequila,Top Grapefruit Juice,Juice of 1 Lime Juice,1 tsp Agave Syrup,Dash Pepper",
+            "instructions": "Tequila reposado infused with “Timur Pepper” which has citrusy & grapefruit notes and is grown at the foothills of Himalaya,It also produces a slightly numbing and tingling sensation on your lip when consumed,We have also spiced up the fresh grapefruit juice with the warming spice blend from Himalaya.The combination of all these interesting elements has allowed us to elevate your Paloma sipping experience.",
+            "glass": "Highball glass" ,
+            "cocktailDB_url": "https://www.thecocktaildb.com/Drink/178348-Winter-Paloma-Cocktail"         
+        },
+        {
+            "name": "Michelada",
+            "ingredients": "4 oz Beer,4 oz Tomato Juice,1 tblsp Lime Juice,Dash Hot Sauce,Dash Worcestershire Sauce,Dash Soy Sauce",
+            "instructions": "Mix the beer with tomato juice, freshly squeezed lime juice, and Worcestershire sauce, teriyaki sauce, soy sauce, or hot sauce,Served in a chilled, salt-rimmed glass",
+            "glass": "Pint glass" ,
+            "cocktailDB_url": "https://www.thecocktaildb.com/Drink/178343-Michelada-Cocktail"          
+        },
+        {
+            "name": "Hot Toddy",
+            "ingredients": "50 ml Whiskey,15 ml Honey,1 Cinnamon,1 lemon,2 Cloves",
+            "instructions": "Whisk the whisky and honey together and split between 2 heatproof glasses,Add half of the cinnamon stick to each, then top up with 200ml boiling water,Add a splash of lemon juice to each, then taste and add more to your preference,Finish each with a slice of lemon, studded with a clove, and serve immediately.",
+            "glass": "Irish coffee cup" ,
+            "cocktailDB_url": "https://www.thecocktaildb.com/Drink/178345-Hot-Toddy-Cocktail"         
+        },
+        {
+            "name": "Boston Sour",
+            "ingredients": "2 oz Blended whiskey,Juice of 1/2 Lemon,1 tsp Powdered sugar,1 Egg white,1 slice Lemon,1 Cherry",
+            "instructions": "Shake juice of lemon powdered sugar blended whiskey and egg white with cracked ice and strain into a whiskey sour glass,Add the slice of lemon and top with the cherry and serve.",
+            "glass": "Whiskey sour glass" ,
+            "cocktailDB_url": "https://www.thecocktaildb.com/drink/11129-Boston-Sour-Cocktail"      
+        },
+        {
+            "name": "Mai Tai",
+            "ingredients": "1 oz Light rum,1/2 oz Orgeat syrup,1/2 oz Triple sec,1 1/2 oz Sweet and sour,1 Cherry",
+            "instructions": "Shake all ingredients with ice,Strain into glass,Garnish and serve with straw.",
+            "glass": "Collins glass" ,
+            "cocktailDB_url": "https://www.thecocktaildb.com/drink/11690-Mai-Tai"         
         }
     ]
 }
