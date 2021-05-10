@@ -17,8 +17,26 @@
         </div>
         <div class='full centered' v-if="user">
             <h3>Interested in this meal?:</h3>
-            <button class="no" type="button" v-on:click="decision(meal.id, 'rejected')">NO</button>
-            <button class="yes" type="button" v-on:click="decision(meal.id, 'selected')">YES</button>
+            <button class="no" type="button" v-on:click="rejectMeal(meal.id)">NO</button>
+            <button class="yes" type="button" v-on:click="selectMeal(meal.id)">YES</button>
+            <transition name="fade">
+                <div
+                    class="alert"
+                    v-show="showSelected"
+                    data-test="show-selected"
+                >
+                    Your selection was noted.
+                </div>
+            </transition>
+            <transition name="fade">
+                <div
+                    class="alert"
+                    v-show="showRejected"
+                    data-test="show-rejected"
+                >
+                    Your rejection was noted.
+                </div>
+            </transition>
         </div>
         <div class='full centered' v-else>
             <br>
@@ -29,15 +47,24 @@
 </template>
 
 <script>
+import { axios } from "@/common/app.js";
 export default {
     props: {
         meal: {
             type: Object,
         },
-        showConfirmation: {
-            type: Boolean,
-            default:false
-        },
+    },
+    data() {
+        return {
+            data: {
+                user_id: null,
+                meal_id: null,
+                meal_decision: null,
+            },
+            showSelected: false,
+            showRejected: false,
+            errors: null,
+        };
     },
     computed: {
         imgSrc() {
@@ -52,12 +79,39 @@ export default {
         },
     },
     methods: {
-        //if user, via the buttons above, makes decision about the meal, pass it to the parent MealsPage
-        decision(x,y) {
-            if(y == "selected") {
-                this.$emit('select-meal', x)
-            } else if (y =="rejected")
-                this.$emit('reject-meal', x)
+        selectMeal(x) {
+                axios.post("/selection", this.selection).then((response) => {
+                    if (response.data.errors) {
+                        this.errors = response.data.errors;
+                        this.showSelected = false;
+                    } else {
+                        this.selection = {
+                            user_id: this.user.id,
+                            meal_id: x,
+                            meal_decision: "selected",
+                        };
+                        this.showSelected = true;
+                        setTimeout(() => (this.showSelected = false), 1000);
+                    }
+                });
+              this.$emit('update-meal')
+        },
+        rejectMeal(x) {
+                axios.post("/selection", this.selection).then((response) => {
+                    if (response.data.errors) {
+                        this.errors = response.data.errors;
+                        this.showRejected = false;
+                    } else {
+                        this.selection = {
+                            user_id: this.user.id,
+                            meal_id: x,
+                            meal_decision: "rejected",
+                        };
+                        this.showRejected = true;
+                        setTimeout(() => (this.showRejected = false), 1000);
+                    }
+                });
+              this.$emit('update-meal')
         },
     }
 

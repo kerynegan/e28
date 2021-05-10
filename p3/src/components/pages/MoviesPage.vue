@@ -5,8 +5,7 @@
         <div v-if="movie">
             <show-movie
                 v-bind:movie="movie"
-                v-on:select-it="selectMovie($event)"
-                v-on:reject-it="rejectMovie($event)"
+                v-on:update-movie="updateMovie()"
             ></show-movie>
         </div>
         <div v-else>
@@ -31,6 +30,11 @@ export default {
             default: null,
         }
     },
+    computed: {
+        user() {
+            return this.$store.state.user;
+        },
+    },
     data() {
         return {
             movie: null,
@@ -50,16 +54,6 @@ export default {
         updateMovie() {
             let randomNumber = Math.floor(Math.random() * this.movies.length);
             this.movie = this.movies[randomNumber];
-        },
-        // if we choose a movie using the buttons on the ShowDrink.vue page, this method is called and passes the call up to the parent App.vue
-        selectMovie(x) {
-            this.$emit("select-movie", x);
-            this.updateMovie();
-        },
-        // if we reject a movie using the buttons on the ShowDrink.vue page, this method is called and passes the call up to the parent App.vue
-        rejectMovie(x) {
-            this.$emit("reject-movie", x);
-            this.updateMovie();
         },
     },
 

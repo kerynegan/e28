@@ -15,26 +15,56 @@
         </div>
         <div class='full centered' v-if="user">
             <h3>Interested in this drink?:</h3>
-            <button class="no" type="button" v-on:click="decision(drink.id, 'rejected')">NO</button>
-            <button class="yes" type="button" v-on:click="decision(drink.id, 'selected')">YES</button>
+            <button class="no" type="button" v-on:click="rejectDrink(drink.id)">NO</button>
+            <button class="yes" type="button" v-on:click="selectDrink(drink.id)">YES</button>
+            <transition name="fade">
+                <div
+                    class="alert"
+                    v-show="showSelected"
+                    data-test="show-selected"
+                >
+                    Your selection was noted.
+                </div>
+            </transition>
+            <transition name="fade">
+                <div
+                    class="alert"
+                    v-show="showRejected"
+                    data-test="show-rejected"
+                >
+                    Your rejection was noted.
+                </div>
+            </transition>
         </div>
         <div class='full centered' v-else>
             <br>
             Please <a href="/account">log in or register</a> to add this to your list!
         </div>
+
     </div>
 </template>
 
 <script>
+import { axios } from "@/common/app.js";
+
 export default {
     props: {
         drink: {
             type: Object,
         },
-        showConfirmation: {
-            type: Boolean,
-            default:false
-        },
+        
+    },
+    data() {
+        return {
+            data: {
+                user_id: null,
+                drink_id: null,
+                drink_decision: null,
+            },
+            showSelected: false,
+            showRejected: false,
+            errors: null,
+        };
     },
     computed: {
         imgSrc() {
@@ -49,13 +79,43 @@ export default {
         },
     },
     methods: {
-        //if user, via the buttons above, makes decision about the drink, pass it to the parent DrinksPage
-        decision(x,y) {
-            if(y == "selected") {
-                this.$emit('select-drink', x)
-            } else if (y =="rejected")
-                this.$emit('reject-drink', x)
+        selectDrink(x) {
+                axios.post("/selection", this.selection).then((response) => {
+                    if (response.data.errors) {
+                        this.errors = response.data.errors;
+                        this.showSelected = false;
+                    } else {
+                        this.selection = {
+                            user_id: this.user.id,
+                            drink_id: x,
+                            drink_decision: "selected",
+                        };
+                        this.showSelected = true;
+                        setTimeout(() => (this.showSelected = false), 1000);
+                    }
+                });
+              this.$emit('update-drink')
         },
+        rejectDrink(x) {
+                axios.post("/selection", this.selection).then((response) => {
+                    if (response.data.errors) {
+                        this.errors = response.data.errors;
+                        this.showRejected = false;
+                    } else {
+                        this.selection = {
+                            user_id: this.user.id,
+                            drink_id: x,
+                            drink_decision: "rejected",
+                        };
+                        this.showRejected = true;
+                        setTimeout(() => (this.showRejected = false), 1000);
+                    }
+                });
+              this.$emit('update-drink')
+        },
+    },
+    mounted(){
+        this.user;
     }
 
 };

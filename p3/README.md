@@ -1,18 +1,3 @@
-# to do list
-+ Add authentication.
-+ Add "Add friend via e-mail."
-+ Add "user added you as a friend, accept?"
-+ once yes on both ends
-    - from profile, show matches page.
-+ edit my selections page to be authenticated-access only
-+ vueX ...?
-    - if selected/rejected already, show different button
-+ end 2 end testing
-    - home page
-    - registration
-    - logging in
-    - movies page
-    - 
 
 # Project 3
 + By: Keryn Egan
@@ -24,24 +9,33 @@
 + [CSS grid styling for decision page](https://codepen.io/danield770/pen/ERajZr)
 + [CSS styling for red X through rejected images on decision page](https://stackoverflow.com/questions/21956790/css-cross-through-an-element)
 
-### The below items are still relevant from p2:
+### I think it's important to reiterate these resources from p2, though they're noted on my credits page:
 + All movie data is from [The Movie Database](https://www.themoviedb.org/).
 + All meal data is from [Spoonacular](https://spoonacular.com/).
 + All drink data is from [the Cocktails Database](https://www.thecocktaildb.com/).
-+ All gradient code created thanks to [CSS Gradient](https://cssgradient.io/).
-+ [Emits documentation](https://v3.vuejs.org/guide/migration/emits-option.html#_2-x-behavior) for the user change buttons 
-+ [Combining .split() and .join() via StackOverflow](https://stackoverflow.com/questions/10982913/javascript-how-to-show-each-element-of-array-on-a-new-line) and the [MDN documentation on split](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) [and join](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join) for a nicer display of the movie genres
+
 
 ## Notes for instructor
-*Any notes for me to refer to while grading; if none, omit this section*
++ This doesn't quite do what I was envisioning yet! I still had hopes to:
++ ----allow users to match with their friends and commonalities
++ ----allow users to update their selections (change them),
++ ----and give some indication on the individual movies page that the user had already selected/rejected the movie
+but I just ran out of time. 
+
+If I had had another two-three weeks I think I would have gotten the project there. 
+Overall though, I feel ok about where it ended up! And I learned a ton.
 
 ## How is authentication being used in your application?
-*(Beyond login/registration)*
++ Only authenticated users can see their own selections (from the link on their /account page).
++ On the movies, meals, and drinks pages, authenticated users can see the buttons to make their selections. (Others who are not authenticated would see a link to login or register instead of those buttons.)
++ Authenticated users have their specific user.id passed to the selections table when they use their buttons.
 
 ## What data entities of your application are being managed via Vuex?
++ User
++ Selections
 
 ## E2E Testing screenshot
 *Include a screenshot showing the results of running all your E2E tests. This screenshot *must* be present to receive credit for the E2E testing requirement of this project. Below is an example screenshot of what is expected.*
 
-![ZipFoods passing E2E tests](https://raw.githubusercontent.com/susanBuck/e28/main/zipfoods/e2e-tests.png)
+![P3 passing E2E tests](/src/assets/images/Screenshot-e2etest-kerynegan.png)
 

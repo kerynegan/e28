@@ -24,6 +24,8 @@ const router = createRouter({
     routes,
 });
 
+
+
 // beforeEach provides a way to execute some code before a route is resolved
 // Ref: https://router.vuejs.org/guide/advanced/navigation-guards.html
 router.beforeEach(async (to) => {

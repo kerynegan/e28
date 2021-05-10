@@ -21,9 +21,6 @@ const store = new Vuex.Store({
     mutations: {
         setSelections(state, payload){
             state.selections = payload;
-        // },
-        // setMyMatches(state, payload){
-        //     state.matches = payload;
         },
         setUser(state, payload) {
             state.user = payload;
@@ -33,6 +30,19 @@ const store = new Vuex.Store({
         fetchSelections(context) {
             axios.get("selection").then((response) => {
                 context.commit('setSelections',  response.data.selection);
+            });
+        },
+        makeSelection(context){
+            return new Promise((resolve) => {
+                axios.post('auth').then((response) => {
+                    if (response.data.authenticated) {
+                        context.commit('setSelections', response.data.user);
+                    } else {
+                        context.commit('setSelections', false);
+                    }
+    
+                    resolve();
+                });
             });
         },
         authUser(context) {
@@ -54,6 +64,13 @@ const store = new Vuex.Store({
             return function (id) {
                 return state.selections.filter((selection) => {
                     return selection.id == id;
+                }, id)[0];
+            }
+        },
+        getSelectionByMovieId(state) {
+            return function (id) {
+                return state.selections.filter((selection) => {
+                    return selection.movie_id == id;
                 }, id)[0];
             }
         },

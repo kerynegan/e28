@@ -1,12 +1,11 @@
-<!--For reviewers, note this page is essentially identical in functionality to both the MealsPage.vue and the MoviesPage.vue-->
+<!--For reviewers, note this page is essentially identical in functionality to both the MealsPage.vue and the DrinksPage.vue-->
 <template>
     <div id="drinks-page">
         <h1>Drinks</h1>
         <div v-if="drink">
             <show-drink
                 v-bind:drink="drink"
-                v-on:select-drink="selectDrink($event)"
-                v-on:reject-drink="rejectDrink($event)"
+                v-on:update-drink="updateDrink()"
             ></show-drink>
         </div>
         <div v-else>
@@ -18,7 +17,6 @@
 
 <script>
 import ShowDrink from "@/components/ShowDrink.vue";
-
 export default {
     components: {
         "show-drink": ShowDrink,
@@ -32,9 +30,6 @@ export default {
             default: null,
         }
     },
-    mounted() {
-        this.updateDrink();
-    },
     computed: {
         user() {
             return this.$store.state.user;
@@ -44,6 +39,9 @@ export default {
         return {
             drink: null,
         };
+    },
+    mounted() {
+        this.updateDrink();
     },
     watch: {
         // To trigger the loading of our initial random drink, watch prop `drinks` --> Thank you, Susan!
@@ -56,16 +54,6 @@ export default {
         updateDrink() {
             let randomNumber = Math.floor(Math.random() * this.drinks.length);
             this.drink = this.drinks[randomNumber];
-        },
-        // if we choose a drink using the buttons on the ShowDrink.vue page, this method is called and passes the call up to the parent App.vue
-        selectDrink(x) {
-            this.$emit("select-drink", x);
-            this.updateDrink();
-        },
-        // if we choose a drink using the buttons on the ShowDrink.vue page, this method is called and passes the call up to the parent App.vue
-        rejectDrink(x) {
-            this.$emit("reject-drink", x);
-            this.updateDrink();
         },
     },
 

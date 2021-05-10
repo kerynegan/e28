@@ -13,35 +13,38 @@
              <div>
                 <label>
                     Name:
-                    <input type="text" v-model="data.name" />
+                    <input type="text" v-model="data.name" data-test="name" v-on:blur="validate"/>
                 </label>
             </div>           
             <div>
                 <label>
                     Email:
-                    <input type="text" v-model="data.email" />
+                    <input type="text" v-model="data.email" data-test="email" v-on:blur="validate"/>
                 </label>
             </div>
             <div>
                 <label>
                     Password:
-                    <input type="password" v-model="data.password" />
+                    <input type="password" v-model="data.password" data-test="password" v-on:blur="validate"/>
                 </label>
             </div>
 
-            <button v-on:click="register">Register</button>
+            <button v-on:click="register" data-test="register-button">Register</button>
 
             <ul v-if="errors">
                 <li class="error" v-for="(error, index) in errors" :key="index">
                     {{ error }}
                 </li>
             </ul>
+            <p v-show="success">You have successfully registered. <a href="/account">Login?</a></p>
+            <p v-show="!success">Already have an account? <a href="/account">Login</a></p>
         </div>
     </div>
 </template>
 
 <script>
 import { axios } from "@/common/app.js";
+import Validator from 'validatorjs'
 
 export default {
     data() {
@@ -68,7 +71,6 @@ export default {
             axios.post("login", this.data).then((response) => {
                 if (response.data.authenticated) {
                     this.$store.commit("setUser", response.data.user);
-
                 } else {
                     this.errors = response.data.errors;
                 }
@@ -82,16 +84,34 @@ export default {
             });
         },
         register() {
-            axios.post("register", this.data).then((response) => {
-                if (response.data.authenticated) {
-                    this.$store.commit("setUser", response.data.user);
-                } else {
-                    this.errors = response.data.errors;
+            if (this.validate()) {
+                axios.post("register", this.data).then((response) => {
+                    if (response.data.authenticated) {
+                        this.$store.commit("setUser", response.data.user);
+                    } else {
+                        this.errors = response.data.errors;
+                    }
+                });
+                if(this.errors==null){
+                    this.success = true;
                 }
-            });
-            if(!this.errors){
-                this.$router.push({ path: 'account' });
             }
+
+        },
+        validate() {
+            let validator = new Validator(this.data, {
+                name: "required|between:3,100",
+                email: 'required|email',
+                password:"required|between:6,20|alpha_num",
+            });
+
+            if (validator.fails()) {
+                this.errors = validator.errors.all();
+            } else {
+                this.errors = null;
+            }
+
+            return validator.passes();
         },
     },
     watch: {

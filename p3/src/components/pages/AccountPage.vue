@@ -1,12 +1,12 @@
 <template>
     <div id="account-page">
         <div v-if="user">
-            <h2>Hi, {{ user.name }}!</h2>
+            <h2 data-test="welcome-message">Hi, {{ user.name }}!</h2>
 
-            <a href="/selections">View my selections</a><br>
+            <a href="/selections" data-test='view-selections'>View my selections</a><br>
         
 
-            <button v-on:click="logout">Logout</button>
+            <button v-on:click="logout" data-test="logout-button">Logout</button>
         </div>
 
         <div v-else id="loginForm">
@@ -14,17 +14,17 @@
             <div>
                 <label>
                     Email:
-                    <input type="text" v-model="data.email" />
+                    <input type="text" v-model="data.email" data-test="email"/>
                 </label>
             </div>
             <div>
                 <label>
                     Password:
-                    <input type="password" v-model="data.password" />
+                    <input type="password" v-model="data.password" data-test="password" />
                 </label>
             </div>
 
-            <button v-on:click="login">Login</button>
+            <button v-on:click="login" data-test="login-button">Login</button>
             <ul v-if="errors">
                 <li class="error" v-for="(error, index) in errors" :key="index">
                     {{ error }}

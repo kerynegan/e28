@@ -5,8 +5,7 @@
         <div v-if="meal">
             <show-meal
                 v-bind:meal="meal"
-                v-on:select-meal="selectMeal($event)"
-                v-on:reject-meal="rejectMeal($event)"
+                v-on:update-meal="updateMeal()"
             ></show-meal>
         </div>
         <div v-else>
@@ -55,16 +54,6 @@ export default {
         updateMeal() {
             let randomNumber = Math.floor(Math.random() * this.meals.length);
             this.meal = this.meals[randomNumber];
-        },
-        // if we choose a meal using the buttons on the ShowDrink.vue page, this method is called and passes the call up to the parent App.vue
-        selectMeal(x) {
-            this.$emit("select-meal", x);
-            this.updateMeal();
-        },
-        // if we reject a meal using the buttons on the ShowDrink.vue page, this method is called and passes the call up to the parent App.vue
-        rejectMeal(x) {
-            this.$emit("reject-meal", x);
-            this.updateMeal();
         },
     },
 

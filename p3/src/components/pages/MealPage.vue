@@ -48,7 +48,7 @@ export default {
         updateMeal() {
             this.x = parseInt(this.id);
             this.x--;
-            this.meal = this.mealss[this.x];
+            this.meal = this.meals[this.x];
         },
     },
 

@@ -15,6 +15,7 @@
                       v-for="link in links"
                       v-bind:key="link"
                       v-bind:to="paths[link]"
+                      data-test="nav"
                       >{{ link }}</router-link>
               </li>
               <!-- display the user ID chosen at the top of the page -->
@@ -36,8 +37,6 @@
             v-bind:meals="meals"
             v-on:update-meals="loadMeals"
             v-on:update-selections="loadSelections"
-            v-on:select-movie="selectMovie($event)"
-            v-on:reject-movie="rejectMovie($event)"
             v-on:select-drink="selectDrink($event)"
             v-on:reject-drink="rejectDrink($event)"
             v-on:select-meal="selectMeal($event)"
@@ -64,7 +63,7 @@ export default {
             showConfirmation: false,
 
             /* Store links in an array to maintain order */
-            links: ["home", "movies", "drinks", "meals", "decisions", "account"],
+            links: ["home", "movies", "drinks", "meals", "account"],
 
             /* Map links to  the appropriate component */
             paths: {
@@ -73,7 +72,6 @@ export default {
                 drinks: "/drinks",
                 meals: "/meals",
                 account: '/account',
-                decisions: "/selections",
                 // matches: "/matches",
             },
         };
@@ -112,21 +110,6 @@ export default {
         },
         loadSelections() {
             this.$store.dispatch('fetchSelections');
-        },
-        //if the user selects the movie (called on ShowMovie.vue, passed to MoviesPage, then here via $event above)
-        selectMovie(x){   
-          //post a new row with user, movie, and string 'selected' to the selections table
-          axios.post('/selection', {
-            user_id: this.user.id,
-            movie_id: x, 
-            movie_decision: "selected"
-            }).then((response) => {
-            if (response.data.errors) {
-                this.errors = response.data.errors;
-            } else {
-                this.showConfirmation = true
-            }
-          });
         },
         //if the user rejects the movie (called on ShowMovie.vue, passed to MoviesPage, then here via $event above)
         rejectMovie(x){   
