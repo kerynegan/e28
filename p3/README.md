@@ -37,5 +37,5 @@ Overall though, I feel ok about where it ended up! And I learned a ton.
 ## E2E Testing screenshot
 *Include a screenshot showing the results of running all your E2E tests. This screenshot *must* be present to receive credit for the E2E testing requirement of this project. Below is an example screenshot of what is expected.*
 
-![P3 passing E2E tests](/src/assets/images/Screenshot-e2etest-kerynegan.png)
+![ZipFoods passing E2E tests](https://raw.githubusercontent.com/kerynegan/e28/6bf4b18fb201fca81cb9bccb2cb8f824b8221022/p3/src/assets/images/Screenshot-e2etest-kerynegan.png)
 
