@@ -37,11 +37,6 @@
             v-bind:meals="meals"
             v-on:update-meals="loadMeals"
             v-on:update-selections="loadSelections"
-            v-on:select-drink="selectDrink($event)"
-            v-on:reject-drink="rejectDrink($event)"
-            v-on:select-meal="selectMeal($event)"
-            v-on:reject-meal="rejectMeal($event)"
-            v-bind:show-confirmation="showConfirmation"
         ></router-view>
     </div>
     <div id="footer">

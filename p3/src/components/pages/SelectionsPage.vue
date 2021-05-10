@@ -34,9 +34,11 @@ export default {
     },
     computed: {
         user() {
+                        // console.log("user");
             return this.$store.state.user;
         },
         selections() {
+                        // console.log("selections");
             return this.$store.state.selections;
         },
 
@@ -45,40 +47,40 @@ export default {
     methods: {
         mealImgSrc(x) {
             try {
+                // console.log("mealimg");
                 return require("@/assets/images/meals/" + x + ".jpg");
             } catch (e) {
+                // console.log("mealimgerror");
                 return require("@/assets/images/meals/example.jpg");
             }
         },
         mealURL(x) {
-            this.url = "/meals/" + x;
-            return this.url;
+            return "/meals/" + x;            
         },
         movieImgSrc(x) {
             try {
+                // console.log("movie img");
                 return require("@/assets/images/movies/" + x + ".jpg");
             } catch (e) {
+                // console.log("movie img error");
                 return require("@/assets/images/movies/example.jpg");
             }
         },
         movieURL(x) {
-            this.url = "/movies/" + x;
-            return this.url;
+            return "/movies/" + x;            
         },
         drinkImgSrc(x) {
             try {
+                            // console.log("drink img");
                 return require("@/assets/images/drinks/" + x + ".jpg");
             } catch (e) {
+                            // console.log("drink img error");
                 return require("@/assets/images/drinks/example.jpg");
             }
         },
         drinkURL(x) {
-            this.url = "/drinks/" + x;
-            return this.url;
+            return "/drinks/" + x;            
         },
-        // updateSelections() {
-        //     this.$emit("update-selections");
-        // },
         loadMySelections() {
             if (this.user) {
                 axios
@@ -86,6 +88,7 @@ export default {
                     .then((response) => {
                         this.mySelections = response.data.selection.map(
                             (selection) => {
+                                console.log("map selection");
                                 return this.$store.getters.getSelectionById(
                                     selection.id
                                 );
@@ -97,11 +100,13 @@ export default {
     },
     watch: {
         user() {
+                        console.log("load selections watch");
             this.loadMySelections();
         },
     },
     //whenever we step away to another page and make a new decision, we want to reload our selections.
     mounted() {
+                    console.log("load selections mounted");
         // this.selections;
         this.loadMySelections();
         

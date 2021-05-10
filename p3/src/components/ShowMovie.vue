@@ -1,5 +1,5 @@
 <template>
-    <div class="show-movie">
+    <div class="show-movie" >
         <div class="split left">
             <img v-bind:src="imgSrc" />
         </div>
@@ -16,7 +16,7 @@
             <p><strong>Genres:</strong> {{ movie.genres.split(',').join(", ") }}</p>
             <p class="url"><a v-bind:href="movie.tmdb_url" target="_blank">View more details at The Movie Database</a><br>(opens in new window)</p>
         </div>
-        <div class='full centered' v-if="user">
+        <div class='full centered' v-if="user" >
             <h3>Interested in this movie?:</h3>
             <button class="no" type="button" v-on:click="rejectMovie(movie.id)">NO</button>
             <button class="yes" type="button" v-on:click="selectMovie(movie.id)">YES</button>
@@ -55,7 +55,7 @@ export default {
         movie: {
             type: Object,
         },
-        
+
     },
     data() {
         return {
@@ -67,6 +67,8 @@ export default {
             showSelected: false,
             showRejected: false,
             errors: null,
+            hasDecision: null,
+            mySelections: [],
         };
     },
     computed: {
@@ -80,8 +82,32 @@ export default {
         user() {
             return this.$store.state.user;
         },
+        selections() {
+                        // console.log("selections");
+            return this.$store.state.selections;
+        },
     },
     methods: {
+        // movieHasDecision() {
+        //     if (this.user) {
+        //         axios
+        //             .get("selection/query?movie_id=" + this.movie.id + "&user_id=" + this.user.id)
+        //             .then((response) => {
+        //                 this.mySelections = response.data.selection.map(
+        //                     (selection) => {
+        //                         // console.log("map selection");
+        //                         return this.$store.getters.getSelectionById(
+        //                             selection.id
+        //                         );
+        //                     }
+        //                 );
+        //             })
+        //             .catch((err) => {
+        //                 console.log(this.movie.id + "no dice" + err);
+        //         });
+        //     console.log(this.mySelections + 'ok');
+        //     }
+        // },
         selectMovie(x) {
                 axios.post("/selection", this.selection).then((response) => {
                     if (response.data.errors) {
@@ -117,8 +143,14 @@ export default {
               this.$emit('update-movie')
         },
     },
+    watch: {
+        movie() {
+            this.movieHasDecision();
+        },
+    },
     mounted(){
         this.user;
+        // this.movieHasDecision(this.movie); 
     }
 
 };

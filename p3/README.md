@@ -20,7 +20,8 @@
 + ----allow users to match with their friends and commonalities
 + ----allow users to update their selections (change them),
 + ----and give some indication on the individual movies page that the user had already selected/rejected the movie
-but I just ran out of time. 
+
+but unfortunately I just ran out of time. 
 
 If I had had another two-three weeks I think I would have gotten the project there. 
 Overall though, I feel ok about where it ended up! And I learned a ton.
@@ -35,7 +36,5 @@ Overall though, I feel ok about where it ended up! And I learned a ton.
 + Selections
 
 ## E2E Testing screenshot
-*Include a screenshot showing the results of running all your E2E tests. This screenshot *must* be present to receive credit for the E2E testing requirement of this project. Below is an example screenshot of what is expected.*
-
-![ZipFoods passing E2E tests](https://raw.githubusercontent.com/kerynegan/e28/6bf4b18fb201fca81cb9bccb2cb8f824b8221022/p3/src/assets/images/Screenshot-e2etest-kerynegan.png)
+![P3 passing E2E tests](https://raw.githubusercontent.com/kerynegan/e28/6bf4b18fb201fca81cb9bccb2cb8f824b8221022/p3/src/assets/images/Screenshot-e2etest-kerynegan.png)
 
