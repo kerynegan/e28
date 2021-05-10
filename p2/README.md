@@ -11,18 +11,18 @@
 + The Credits Page [http://e28p2.kerynegan.me/credits](http://e28p2.kerynegan.me/credits) --> Simple page to display credits for the data used in the project.
 
 ## SFC summary
-App.vue
-Components folder
-.../components/ShowMovie.vue
-.../components/ShowDrink.vue
-.../components/ShowMeal.vue
---pages folder
-.../components/pages/HomePage.vue
-.../components/pages/MoviesPage.vue
-.../components/pages/DrinksPage.vue
-.../components/pages/MealsPage.vue
-.../components/pages/MatchesPage.vue
-.../components/pages/CreditsPage.vue
++ App.vue
++ Components folder
++ .../components/ShowMovie.vue
++ .../components/ShowDrink.vue
++ .../components/ShowMeal.vue
++ --pages folder
++ .../components/pages/HomePage.vue
++ .../components/pages/MoviesPage.vue
++ .../components/pages/DrinksPage.vue
++ .../components/pages/MealsPage.vue
++ .../components/pages/MatchesPage.vue
++ .../components/pages/CreditsPage.vue
   
 ## Server interaction
 + Reads data from the movies table on [the Movies Page](http://e28p2.kerynegan.me/movies) 
