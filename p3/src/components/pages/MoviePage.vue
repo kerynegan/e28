@@ -4,6 +4,7 @@
         <div v-if="movie">
             <show-movie
                 v-bind:movie="movie"
+                v-bind:moviespage="moviespage"
             ></show-movie>
         </div>
         <div v-else>
@@ -33,6 +34,7 @@ export default {
         return {
             movie: null,
             x: null,
+            moviespage: false,
         };
     },
     mounted() {

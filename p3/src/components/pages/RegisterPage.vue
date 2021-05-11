@@ -25,7 +25,7 @@
             <div>
                 <label>
                     Password:
-                    <input type="password" v-model="data.password" data-test="password" v-on:blur="validate"/>
+                    <input type="password" v-model="data.password" data-test="password" v-on:blur="validate"  v-on:keyup.enter="register" />
                 </label>
             </div>
 

@@ -8,6 +8,7 @@
 + [VueX 3 vs VueX 4 problem for CreateStore](https://stackoverflow.com/questions/64965307/getting-export-createstore-was-not-found-in-vuex-warning)
 + [CSS grid styling for decision page](https://codepen.io/danield770/pen/ERajZr)
 + [CSS styling for red X through rejected images on decision page](https://stackoverflow.com/questions/21956790/css-cross-through-an-element)
++ [Press enter to submit login or registration forms](https://vuejs.org/v2/guide/events.html#Key-Modifiers)
 
 ### I think it's important to reiterate these resources from p2, though they're noted on my credits page:
 + All movie data is from [The Movie Database](https://www.themoviedb.org/).
@@ -16,10 +17,11 @@
 
 
 ## Notes for instructor
-+ This doesn't quite do what I was envisioning yet! I still had hopes to:
-+ ----allow users to match with their friends and commonalities
-+ ----allow users to update their selections (change them),
-+ ----and give some indication on the individual movies page that the user had already selected/rejected the movie
+This doesn't quite do what I was envisioning yet! I still had hopes to:
+
++ allow users to match with their friends and find common selections
++ allow users to update their selections (change selected to rejected, etc.),
++ and give some indication on the individual movies page that the user had already selected/rejected the movie
 
 but unfortunately I just ran out of time. 
 

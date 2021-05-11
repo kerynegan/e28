@@ -20,7 +20,7 @@
             <div>
                 <label>
                     Password:
-                    <input type="password" v-model="data.password" data-test="password" />
+                    <input type="password" v-model="data.password" data-test="password" v-on:keyup.enter="login" />
                 </label>
             </div>
 

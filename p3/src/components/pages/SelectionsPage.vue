@@ -5,8 +5,7 @@
             Please <a href="/account">log in</a> to see decisions you've made.
         </div>
         <div class="selected-display" v-else-if="selections">
-        <ul  class='decision-list'>
-<!--For now, I just want to show all of the selections. Once I have the user IDs/authenticaion in place, I'll filter on user ID and display matches with other users, as well as the details about the pick (movie title, meal picture, etc.) -->      
+        <ul  class='decision-list'>   
             <li class="show-selection" v-for="selection in mySelections" v-bind:key="selection.id" >  
                 <span v-if="selection.meal_id" v-bind:class='selection.meal_decision'> <a v-bind:href="mealURL(selection.meal_id)" data-test="meal-link"><img  class="thumb" v-bind:src="mealImgSrc(selection.meal_id)" /></a></span>
                 <span v-else-if="selection.movie_id" v-bind:class='selection.movie_decision'> <a v-bind:href="movieURL(selection.movie_id)" data-test="movie-link"><img  class="thumb" v-bind:src="movieImgSrc(selection.movie_id)" /></a></span>
@@ -88,7 +87,7 @@ export default {
                     .then((response) => {
                         this.mySelections = response.data.selection.map(
                             (selection) => {
-                                console.log("map selection");
+                                // console.log("map selection");
                                 return this.$store.getters.getSelectionById(
                                     selection.id
                                 );
@@ -100,13 +99,13 @@ export default {
     },
     watch: {
         user() {
-                        console.log("load selections watch");
+                        // console.log("load selections watch");
             this.loadMySelections();
         },
     },
     //whenever we step away to another page and make a new decision, we want to reload our selections.
     mounted() {
-                    console.log("load selections mounted");
+                    // console.log("load selections mounted");
         // this.selections;
         this.loadMySelections();
         

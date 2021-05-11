@@ -13,7 +13,7 @@
             <p><strong>Instructions:</strong> {{ drink.instructions.split(',').join(", ") }}</p>
             <p class="url"><a v-bind:href="drink.cocktailDB_url" target="_blank">View more details at The Cocktail Database</a><br>(opens in new window)</p>
         </div>
-        <div class='full centered' v-if="user">
+        <div class='full centered'  v-if="user && drinkspage" >
             <h3>Interested in this drink?:</h3>
             <button class="no" type="button" v-on:click="rejectDrink(drink.id)">NO</button>
             <button class="yes" type="button" v-on:click="selectDrink(drink.id)">YES</button>
@@ -36,7 +36,11 @@
                 </div>
             </transition>
         </div>
-        <div class='full centered' v-else>
+        <div class='full centered' v-else-if="user && !drinkspage">
+            <br>
+            Want to view other drinks? <a href="/drinks">See our drinks page.</a>
+        </div>
+        <div class='full centered' v-else-if="!user">
             <br>
             Please <a href="/account">log in or register</a> to add this to your list!
         </div>
@@ -52,7 +56,9 @@ export default {
         drink: {
             type: Object,
         },
-        
+        drinkspage: {
+            type: Boolean,
+        }
     },
     data() {
         return {
@@ -80,38 +86,30 @@ export default {
     },
     methods: {
         selectDrink(x) {
-                axios.post("/selection", this.selection).then((response) => {
-                    if (response.data.errors) {
-                        this.errors = response.data.errors;
-                        this.showSelected = false;
-                    } else {
-                        this.selection = {
-                            user_id: this.user.id,
-                            drink_id: x,
-                            drink_decision: "selected",
-                        };
+                axios.post("/selection", 
+                    this.selection = {
+                        user_id: this.user.id,
+                        drink_id: x,
+                        drink_decision: "selected",
+                    }).then(() => {
                         this.showSelected = true;
                         setTimeout(() => (this.showSelected = false), 1000);
+                        this.$emit('update-drink')
                     }
-                });
-              this.$emit('update-drink')
+                );
         },
         rejectDrink(x) {
-                axios.post("/selection", this.selection).then((response) => {
-                    if (response.data.errors) {
-                        this.errors = response.data.errors;
-                        this.showRejected = false;
-                    } else {
-                        this.selection = {
-                            user_id: this.user.id,
-                            drink_id: x,
-                            drink_decision: "rejected",
-                        };
+                axios.post("/selection", 
+                    this.selection = {
+                        user_id: this.user.id,
+                        drink_id: x,
+                        drink_decision: "rejected",
+                    }).then(() => {
                         this.showRejected = true;
                         setTimeout(() => (this.showRejected = false), 1000);
+                        this.$emit('update-drink')
                     }
-                });
-              this.$emit('update-drink')
+                );
         },
     },
     mounted(){

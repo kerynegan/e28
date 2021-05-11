@@ -4,6 +4,7 @@
         <div v-if="meal">
             <show-meal
                 v-bind:meal="meal"
+                v-bind:mealspage="mealspage"
             ></show-meal>
         </div>
         <div v-else>
@@ -33,6 +34,7 @@ export default {
         return {
             meal: null,
             x: null,
+            mealspage: false,
         };
     },
     mounted() {

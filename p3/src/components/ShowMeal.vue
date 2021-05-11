@@ -15,7 +15,7 @@
             <p><strong>Keywords:</strong> {{ meal.keywords.split(',').join(", ") }}</p>
             <p class="url"><a v-bind:href="meal.spoonacular_url" target="_blank">View more details at Spoonacular</a><br>(opens in new window)</p>
         </div>
-        <div class='full centered' v-if="user">
+        <div class='full centered' v-if="user && mealspage" >
             <h3>Interested in this meal?:</h3>
             <button class="no" type="button" v-on:click="rejectMeal(meal.id)">NO</button>
             <button class="yes" type="button" v-on:click="selectMeal(meal.id)">YES</button>
@@ -38,11 +38,14 @@
                 </div>
             </transition>
         </div>
-        <div class='full centered' v-else>
+        <div class='full centered' v-else-if="user && !mealspage">
+            <br>
+            Want to view other meals? <a href="/meals">See our meals page.</a>
+        </div>
+        <div class='full centered' v-else-if="!user">
             <br>
             Please <a href="/account">log in or register</a> to add this to your list!
         </div>
-
     </div>
 </template>
 
@@ -53,6 +56,9 @@ export default {
         meal: {
             type: Object,
         },
+        mealspage: {
+            type: Boolean,
+        }
     },
     data() {
         return {
@@ -80,41 +86,36 @@ export default {
     },
     methods: {
         selectMeal(x) {
-                axios.post("/selection", this.selection).then((response) => {
-                    if (response.data.errors) {
-                        this.errors = response.data.errors;
-                        this.showSelected = false;
-                    } else {
-                        this.selection = {
-                            user_id: this.user.id,
-                            meal_id: x,
-                            meal_decision: "selected",
-                        };
+                axios.post("/selection", 
+                    this.selection = {
+                        user_id: this.user.id,
+                        meal_id: x,
+                        meal_decision: "selected",
+                    }).then(() => {
                         this.showSelected = true;
                         setTimeout(() => (this.showSelected = false), 1000);
+                        this.$emit('update-meal')
                     }
-                });
-              this.$emit('update-meal')
+                );
+
         },
         rejectMeal(x) {
-                axios.post("/selection", this.selection).then((response) => {
-                    if (response.data.errors) {
-                        this.errors = response.data.errors;
-                        this.showRejected = false;
-                    } else {
-                        this.selection = {
-                            user_id: this.user.id,
-                            meal_id: x,
-                            meal_decision: "rejected",
-                        };
+                axios.post("/selection", 
+                    this.selection = {
+                        user_id: this.user.id,
+                        meal_id: x,
+                        meal_decision: "rejected",
+                    }).then(() => {
                         this.showRejected = true;
                         setTimeout(() => (this.showRejected = false), 1000);
+                        this.$emit('update-meal')
                     }
-                });
-              this.$emit('update-meal')
+                );
         },
+    },
+    mounted(){
+        this.user;
     }
-
 };
 </script>
 

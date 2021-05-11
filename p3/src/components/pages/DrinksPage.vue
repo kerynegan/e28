@@ -5,6 +5,7 @@
         <div v-if="drink">
             <show-drink
                 v-bind:drink="drink"
+                v-bind:drinkspage="drinkspage"
                 v-on:update-drink="updateDrink()"
             ></show-drink>
         </div>
@@ -38,6 +39,7 @@ export default {
     data() {
         return {
             drink: null,
+            drinkspage: true,
         };
     },
     mounted() {

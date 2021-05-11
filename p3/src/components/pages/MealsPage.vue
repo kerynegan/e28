@@ -5,6 +5,7 @@
         <div v-if="meal">
             <show-meal
                 v-bind:meal="meal"
+                v-bind:mealspage="mealspage"
                 v-on:update-meal="updateMeal()"
             ></show-meal>
         </div>
@@ -38,6 +39,7 @@ export default {
     data() {
         return {
             meal: null,
+            mealspage: true,
         };
     },
     mounted() {

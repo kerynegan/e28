@@ -16,10 +16,15 @@
             <p><strong>Genres:</strong> {{ movie.genres.split(',').join(", ") }}</p>
             <p class="url"><a v-bind:href="movie.tmdb_url" target="_blank">View more details at The Movie Database</a><br>(opens in new window)</p>
         </div>
-        <div class='full centered' v-if="user" >
+        <div class='full centered' v-if="user && moviespage" >
             <h3>Interested in this movie?:</h3>
             <button class="no" type="button" v-on:click="rejectMovie(movie.id)">NO</button>
             <button class="yes" type="button" v-on:click="selectMovie(movie.id)">YES</button>
+            <ul v-if="errors">
+                <li class="error" v-for="(error, index) in errors" :key="index">
+                    {{ error }}
+                </li>
+            </ul>
             <transition name="fade">
                 <div
                     class="alert"
@@ -39,7 +44,11 @@
                 </div>
             </transition>
         </div>
-        <div class='full centered' v-else>
+        <div class='full centered' v-else-if="user && !moviespage">
+            <br>
+            Want to view other movies? <a href="/movies">See our movies page.</a>
+        </div>
+        <div class='full centered' v-else-if="!user">
             <br>
             Please <a href="/account">log in or register</a> to add this to your list!
         </div>
@@ -49,13 +58,14 @@
 
 <script>
 import { axios } from "@/common/app.js";
-
 export default {
     props: {
         movie: {
             type: Object,
         },
-
+        moviespage: {
+            type: Boolean,
+        }
     },
     data() {
         return {
@@ -67,8 +77,6 @@ export default {
             showSelected: false,
             showRejected: false,
             errors: null,
-            hasDecision: null,
-            mySelections: [],
         };
     },
     computed: {
@@ -82,77 +90,39 @@ export default {
         user() {
             return this.$store.state.user;
         },
-        selections() {
-                        // console.log("selections");
-            return this.$store.state.selections;
-        },
     },
     methods: {
-        // movieHasDecision() {
-        //     if (this.user) {
-        //         axios
-        //             .get("selection/query?movie_id=" + this.movie.id + "&user_id=" + this.user.id)
-        //             .then((response) => {
-        //                 this.mySelections = response.data.selection.map(
-        //                     (selection) => {
-        //                         // console.log("map selection");
-        //                         return this.$store.getters.getSelectionById(
-        //                             selection.id
-        //                         );
-        //                     }
-        //                 );
-        //             })
-        //             .catch((err) => {
-        //                 console.log(this.movie.id + "no dice" + err);
-        //         });
-        //     console.log(this.mySelections + 'ok');
-        //     }
-        // },
         selectMovie(x) {
-                axios.post("/selection", this.selection).then((response) => {
-                    if (response.data.errors) {
-                        this.errors = response.data.errors;
-                        this.showSelected = false;
-                    } else {
-                        this.selection = {
-                            user_id: this.user.id,
-                            movie_id: x,
-                            movie_decision: "selected",
-                        };
+                axios.post("/selection", 
+                    this.selection = {
+                        user_id: this.user.id,
+                        movie_id: x,
+                        movie_decision: "selected",
+                    }).then(() => {
                         this.showSelected = true;
-                        setTimeout(() => (this.showSelected = false), 1000);
+                        setTimeout(() => (this.showSelected= false), 1000);
+                        this.$emit('update-movie')
                     }
-                });
-              this.$emit('update-movie')
+                );
+
         },
         rejectMovie(x) {
-                axios.post("/selection", this.selection).then((response) => {
-                    if (response.data.errors) {
-                        this.errors = response.data.errors;
-                        this.showRejected = false;
-                    } else {
-                        this.selection = {
-                            user_id: this.user.id,
-                            movie_id: x,
-                            movie_decision: "rejected",
-                        };
+                axios.post("/selection", 
+                    this.selection = {
+                        user_id: this.user.id,
+                        movie_id: x,
+                        movie_decision: "rejected",
+                    }).then(() => {
                         this.showRejected = true;
                         setTimeout(() => (this.showRejected = false), 1000);
+                        this.$emit('update-movie')
                     }
-                });
-              this.$emit('update-movie')
-        },
-    },
-    watch: {
-        movie() {
-            this.movieHasDecision();
+                );
         },
     },
     mounted(){
         this.user;
-        // this.movieHasDecision(this.movie); 
     }
-
 };
 </script>
 
