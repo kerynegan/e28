@@ -38,5 +38,5 @@ Overall though, I feel ok about where it ended up! And I learned a ton.
 + Selections
 
 ## E2E Testing screenshot
-![P3 passing E2E tests](https://raw.githubusercontent.com/kerynegan/e28/6bf4b18fb201fca81cb9bccb2cb8f824b8221022/p3/src/assets/images/Screenshot-e2etest-kerynegan.png)
+![P3 passing E2E tests](p3/src/assets/images/Screenshot-e2etest-kerynegan.png)
 
